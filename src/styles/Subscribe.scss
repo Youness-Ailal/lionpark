@@ -40,11 +40,11 @@
       gap: 2rem;
       position: relative;
       margin-top: auto;
-      padding: 2rem 0;
+      padding: 2rem 1rem;
       @media (max-width: 500px) {
         grid-template-columns: 3fr 1fr;
       }
-      @media (max-width: 350px) {
+      @media (max-width: 400px) {
         grid-template-columns: 1fr;
       }
       input {

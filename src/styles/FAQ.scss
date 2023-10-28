@@ -30,6 +30,9 @@
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);
   overflow: hidden;
+  @media (max-width: 600px) {
+    padding: 0 0.5rem;
+  }
   &__top {
     cursor: pointer;
     display: flex;
