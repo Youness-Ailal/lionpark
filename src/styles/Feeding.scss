@@ -4,6 +4,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
+    @media (max-width: 1060px) {
+      gap: 4rem;
+    }
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+      gap: 8rem;
+    }
   }
   &__left {
     display: flex;
@@ -50,6 +57,10 @@
     font-weight: 500;
     &:hover {
       color: var(--normal-green);
+    }
+    @media (max-width: 1440px) {
+      margin-left: 0;
+      margin-right: auto;
     }
   }
   &__icon {

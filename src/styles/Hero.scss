@@ -5,6 +5,10 @@
   &__top {
     max-width: 160rem;
     padding: 0 5rem;
+    @media (max-width: 650px) {
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+    }
   }
   &__select {
     font-size: 1.4rem;
@@ -13,16 +17,16 @@
       color: #fff;
     }
   }
-  &__mid {
-    max-width: 160rem;
-    padding: 0 5rem;
-  }
+
   // &__content {
   //   display: flex;
   //   flex-direction: column;
   //   gap: 2rem;
   // }
   &__title {
+    @media (max-width: 650px) {
+      align-self: start;
+    }
     span {
       position: relative;
     }
@@ -47,15 +51,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 4rem;
     margin-bottom: 2rem;
+    max-width: 160rem;
+    padding: 0 5rem;
+    @media (max-width: 650px) {
+      flex-direction: column;
+      gap: 0rem;
+      padding: 0 2rem;
+    }
   }
   &__bottom {
     z-index: -1;
     min-width: 100dvw;
     padding-left: 2rem;
-    translate: 0 -6rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;

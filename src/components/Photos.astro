@@ -1,0 +1,60 @@
+---
+import "../styles/Photos.scss";
+import photo1 from "/images/gallery1.jpg?url";
+import photo2 from "/images/gallery2.jpg?url";
+import photo3 from "/images/gallery3.jpg?url";
+import photo4 from "/images/gallery4.jpg?url";
+import photo5 from "/images/gallery5.jpg?url";
+import photo6 from "/images/gallery6.jpg?url";
+import photo7 from "/images/gallery7.jpg?url";
+---
+
+<section class="gallery">
+  <div class="container">
+    <h1 class="heading-second gallery__title">
+      Witness the Wild - Lion Zoo in Photos
+    </h1>
+    <div class="gallery__photos">
+      <div class="gallery__photo">
+        <img src={photo1} alt="Photo of a big wild cat" />
+      </div>
+      <div class="gallery__photo">
+        <img src={photo2} alt="Photo of a big wild cat" />
+      </div>
+      <div class="gallery__photo">
+        <img src={photo3} alt="Photo of a big wild cat" />
+      </div>
+      <div class="gallery__photo">
+        <img src={photo4} alt="Photo of a big wild cat" />
+      </div>
+      <div class="gallery__photo">
+        <img src={photo5} alt="Photo of a big wild cat" />
+      </div>
+      <a
+        target="_blank"
+        href="https://www.instagram.com/natgeomagarab/"
+        class="gallery__photo">
+        <img src={photo6} alt="Photo of a big wild cat" />
+      </a>
+    </div>
+    <div class="week">
+      <div class="week__left">
+        <h2 class="heading-second week__title">Photo of the Week</h2>
+        <h3 class="heading-third week__title2">by Sarah</h3>
+        <p class="paragraph week__text">
+          The winner will receive a 50% discount on the next visit to the park!*
+        </p>
+        <button class="cta week__button">Send Your Photo</button>
+      </div>
+      <div class="week__right">
+        <img src={photo7} alt="photo of the week" />
+      </div>
+    </div>
+    <p class="paragraph week__desc">
+      *The winner is chosen weekly by the contest organizers. 50% discount can
+      be used for 2 tickets within 2 months from the date of receipt. You will
+      receive a notification about the winnings to the email indicated in your
+      profile.
+    </p>
+  </div>
+</section>

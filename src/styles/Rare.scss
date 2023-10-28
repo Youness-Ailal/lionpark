@@ -9,6 +9,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
+    @media (max-width: 1100px) {
+      gap: 4rem;
+    }
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__right {
     display: flex;

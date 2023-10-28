@@ -34,9 +34,13 @@
   }
   &__social {
     height: 4rem;
-    background-color: var(--normal-green);
+    background-color: var(--normal-green-hover);
     border-radius: 20rem;
     padding: 0.5rem;
+    transition: 0.2s;
+    &:hover {
+      background-color: var(--normal-green);
+    }
   }
   &__title {
     font-size: 2.4rem;

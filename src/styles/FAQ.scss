@@ -37,6 +37,10 @@
     justify-content: space-between;
     padding: 1.5rem 0;
     z-index: 99;
+    @media (max-width: 450px) {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+    }
   }
   &__title {
     font-size: 2rem;
@@ -47,6 +51,10 @@
     transition: 0.2s;
     rotate: 180deg;
     color: var(--normal-color-hover);
+    @media (max-width: 450px) {
+      margin-left: auto;
+      margin-right: 2rem;
+    }
   }
   &__content {
     max-height: 0;

@@ -24,7 +24,8 @@ const navTl = gsap.timeline();
 const showNav = function () {
   dropNav.classList.remove("hidden-drop");
   dropBg.classList.remove("hidden-bg");
-  document.documentElement.style.setProperty("--body-overflow", "hidden");
+  document.body.style.overflowY = "hidden";
+  navButton.checked = true;
 
   navTl
     .fromTo(
@@ -65,6 +66,9 @@ const showNav = function () {
     );
 };
 const hideNav = function () {
+  document.body.style.overflowY = "auto";
+  navButton.checked = false;
+
   navTl
     .fromTo(
       navItems,
