@@ -1,6 +1,9 @@
 .footer {
   margin-top: 20rem;
   background: linear-gradient(to bottom, var(--dark-green), #124a26);
+  border-radius: 5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   &__container {
     padding: 5rem;
     display: flex;

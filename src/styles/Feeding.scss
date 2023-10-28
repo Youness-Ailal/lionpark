@@ -16,13 +16,15 @@
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 0rem;
     &--top {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
       row-gap: 2rem;
+      border-bottom: 1px solid var(--light-green-2);
+      padding-bottom: 4rem;
     }
     &--bottom {
       display: flex;
@@ -44,6 +46,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
     &:hover {
       color: var(--normal-green);
     }
