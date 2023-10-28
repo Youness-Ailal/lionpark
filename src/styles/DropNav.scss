@@ -51,10 +51,12 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
     &-links {
       display: flex;
+      font-size: 2rem;
     }
     @media (min-width: 700px) {
       display: none;

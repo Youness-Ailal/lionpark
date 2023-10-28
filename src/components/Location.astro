@@ -8,20 +8,27 @@ import Icon from "astro-icon";
     <div class="location__top">
       <h2 class="heading-second location__title">Where Are We?</h2>
     </div>
-    <div class="location__mid">
-      <p class="paragraph location__p">
-        <Icon class="icon location__p--icon" name="mi:location" />Drarga street
-        1, Agadir Morocco
-      </p>
-      <div class="open location__open">
-        <div class="open--dot">
-          <div class="open--dot-bg"></div>
-        </div>
-        <p class="open--p">open daily 9:00 to 17:00 (GMT+1)</p>
-      </div>
-    </div>
     <div class="location__bottom">
-      <div id="map"></div>
+      <div class="location__left">
+        <div id="map"></div>
+      </div>
+      <div class="location__right">
+        <p class="paragraph location__p">
+          <Icon class="icon location__p--icon" name="mi:location" />Drarga
+          street 1, Agadir Morocco
+        </p>
+        <p class="paragraph location__instructions">
+          Once you're on the Marrakesh-Agadir Highway in Drarga, follow the
+          signs to Lion Park, just 2 minutes from Crocopark. At the park's
+          entrance checkpoint, mention that you're visiting Lion Park.
+        </p>
+        <div class="open location__open">
+          <div class="open--dot">
+            <div class="open--dot-bg"></div>
+          </div>
+          <p class="open--p">open daily 9:00 to 17:00 (GMT+1)</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
