@@ -1,0 +1,35 @@
+---
+import "../styles/Rare.scss";
+import lion10 from "/images/lionvideo.jpg?url";
+import { Vimeo } from "@astro-community/astro-embed-vimeo";
+---
+
+<section class="rare">
+  <div class="container rare__container">
+    <div class="rare__top">
+      <h2 class="heading-second rare__title">
+        Visit the Rare Animal Reproduction Center
+      </h2>
+    </div>
+    <div class="rare__bottom">
+      <div class="rare__left">
+        <div class="rare__video--container">
+          <Vimeo id="475645175" poster={lion10} client:load />
+        </div>
+      </div>
+      <div class="rare__right">
+        <p class="paragraph rare__text">
+          The Rare Animal Reproduction Center, located just 100 km from Agadir
+          in Morocco, covers 200 hectares and houses more than 7,500 animals
+          from 213 species, spanning continents from the Arctic to Africa. We're
+          dedicated to safeguarding and protecting endangered species, and our
+          successes include the first-ever Moroccan breeding of wolverines,
+          vicuñas, Marco Polo sheep, and Far Eastern storks. You can visit us
+          individually or with a group to observe these animals in their natural
+          habitats.
+        </p>
+        <a class="cta" href="/Tickets">Explore Center's Tour</a>
+      </div>
+    </div>
+  </div>
+</section>

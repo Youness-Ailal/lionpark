@@ -1,0 +1,60 @@
+---
+import "../styles/FAQ.scss";
+import Icon from "astro-icon";
+import faqs from "../../public/FAQ.json";
+const faq1 = faqs.slice(0, Math.ceil(faqs.length / 2));
+const faq2 = faqs.slice(Math.ceil(faqs.length / 2));
+---
+
+<section class="faq" id="faq">
+  <div class="container faq__container">
+    <div class="faq__top">
+      <h2 class="heading-second faq__title">
+        What do zoo visitors need to know?
+      </h2>
+    </div>
+    <div class="faq__questions">
+      <ul class="faq__content">
+        {
+          faq1.map(question => {
+            return (
+              <li class="question">
+                <div class="question__top">
+                  <h4 class="question__title">{question.title}</h4>
+                  <Icon
+                    class="icon question__icon"
+                    name="simple-line-icons:arrow-up"
+                  />
+                </div>
+                <div class="question__content">
+                  <p class="paragraph question__text">{question.answer}</p>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+      <ul class="faq__content">
+        {
+          faq2.map(question => {
+            return (
+              <li class="question">
+                <div class="question__top">
+                  <h4 class="question__title">{question.title}</h4>
+                  <Icon
+                    class="icon question__icon"
+                    name="simple-line-icons:arrow-up"
+                  />
+                </div>
+                <div class="question__content">
+                  <p class="paragraph question__text">{question.answer}</p>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+<script src="../script/faq.js"></script>

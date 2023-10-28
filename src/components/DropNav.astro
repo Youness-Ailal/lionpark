@@ -1,0 +1,46 @@
+---
+import "../styles/DropNav.scss";
+import Icon from "astro-icon";
+---
+
+<div class="dropdown hidden-drop">
+  <ul>
+    <li class="dropdown__item">
+      <Icon class="icon dropdown__icon" name="clarity:image-gallery-line" />
+      <a href="/Gallery">Photo Gallery</a>
+    </li>
+    <li class="dropdown__item">
+      <Icon class="icon dropdown__icon" name="la:money-bill-wave-alt" />
+      <a href="/Gallery">Pricing</a>
+    </li>
+    <li class="dropdown__item">
+      <Icon class="icon dropdown__icon" name="ic:outline-contact-support" />
+      <a href="/Gallery">Contact & Work Schedule</a>
+    </li>
+
+    <li class="dropdown__item">
+      <Icon class="icon dropdown__icon" name="mi:location" />
+      <a href="/Gallery">Location</a>
+    </li>
+    <li class="dropdown__item">
+      <Icon class="icon dropdown__icon" name="octicon:info-16" />
+      <a href="/Gallery">About us</a>
+    </li>
+  </ul>
+  <div class="dropdown__bottom">
+    <div class="header__right dropdown__bottom--elements">
+      <div class="header__open dropdown__bottom-links">
+        <div class="header__open--dot"></div>
+        <p class="header__open--p">open daily 9:00 to 17:00 (GMT+1)</p>
+      </div>
+      <a
+        href="tel:+212624360624"
+        class="header__phone link dropdown__bottom-links">
+        <Icon class="header__phone--icon icon" name="ph:phone-light" />
+         +212 123456789</a
+      >
+    </div>
+  </div>
+</div>
+<div class="dropdown__bg hidden-bg"></div>
+<script src="../script/Nav.js"></script>

@@ -1,0 +1,77 @@
+---
+import logo from "/images/logo-footer.svg?url";
+import Icon from "astro-icon";
+import "../styles/Footer.scss";
+import lion1 from "/images/lion1.jpg?url";
+import lion2 from "/images/lion7.jpg?url";
+import lion3 from "/images/lion3.jpg?url";
+import lion4 from "/images/lion4.jpg?url";
+import Location from "./Location.astro";
+const year = new Date().getFullYear();
+---
+
+<Location client:load />
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__logos">
+      <img class="footer__logo" src={logo} alt="lion zoo logo" />
+      <div class="footer__socials">
+        <a target="_blank" href="https://facebook.com/"
+          ><Icon class="icon footer__social" name="ic:baseline-facebook" /></a
+        >
+        <a target="_blank" href="https://www.instagram.com/"
+          ><Icon class="icon footer__social" name="mdi:instagram" /></a
+        >
+        <a target="_blank" href="https://www.youtube.com/"
+          ><Icon class="icon footer__social" name="mdi:youtube" /></a
+        >
+        <a target="_blank" href="https://www.linkedin.com/in/youness-ailal/"
+          ><Icon class="icon footer__social" name="mdi:linkedin" /></a
+        >
+      </div>
+    </div>
+    <div class="footer__links">
+      <h4 class="footer__title">links</h4>
+      <a href="/" class="link footer__link">Home</a>
+      <a href="/" class="link footer__link">Gallery</a>
+      <a href="/" class="link footer__link">About</a>
+      <a href="/" class="link footer__link">Pricing</a>
+      <a href="/" class="link footer__link">Location</a>
+    </div>
+
+    <div class="footer__contact">
+      <h4 class="footer__title">contact</h4>
+      <a href="tel:+212123456789" class="link footer__link"
+        ><Icon class="icon footer__icon" name="ph:phone-light" />+212 123456789</a
+      >
+      <a href="mailto:itsyounessaylal@gmail.com" class="link footer__link">
+        <Icon
+          class="icon footer__icon"
+          name="ic:outline-mail"
+        />itsyounessaylal@gmail.com</a
+      >
+      <a class="link footer__link" href="/"
+        ><Icon class="icon footer__icon" name="mi:location" />Drarga street 1,
+        Agadir</a
+      >
+    </div>
+
+    <div class="footer__photos">
+      <h4 class="footer__title">latest photos</h4>
+      <div class="footer__gallery">
+        <img src={lion1} alt="a lion from lion park Agadir" />
+        <img src={lion2} alt="a lion from lion park Agadir" />
+        <img src={lion3} alt="a lion from lion park Agadir" />
+        <img src={lion4} alt="a lion from lion park Agadir" />
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>
+      &copy; {year} Made by <a
+        target="_blank"
+        href="https://www.linkedin.com/in/youness-ailal/">@Youness Ailal</a
+      >
+    </p>
+  </div>
+</footer>

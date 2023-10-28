@@ -1,0 +1,27 @@
+---
+import mapBg from "/images/map-bg.svg?url";
+import "../styles/Map.scss";
+import Icon from "astro-icon";
+---
+
+<section class="map" id="map-cart">
+  <div class="container map__container">
+    <div class="map__top">
+      <h1 class="heading-second map__title">Explore the Map</h1>
+    </div>
+    <div class="map__bottom">
+      <a href="../../public/images/map-bg.jpg" download class="map__download">
+        Download Map<Icon
+          class="icon map__icon"
+          name="teenyicons:download-outline"
+        />
+      </a>
+
+      <img class="map__bg-map" src={mapBg} alt="lion park map" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<script>
+  import svgMap from "../../public/images/map-bg.svg";
+</script>

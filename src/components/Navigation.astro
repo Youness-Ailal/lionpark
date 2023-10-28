@@ -1,0 +1,42 @@
+---
+import logo from "/images/logo.svg?url";
+import "../styles/Navigation.scss";
+import { Icon } from "astro-icon";
+import DropNav from "./DropNav.astro";
+---
+
+<header class="header">
+  <div class="header__left">
+    <img src={logo} alt="lion park logo" />
+  </div>
+  <div class="header__right">
+    <div class="open">
+      <div class="open--dot">
+        <div class="open--dot-bg"></div>
+      </div>
+      <p class="open--p">open daily 9:00 to 17:00 (GMT+1)</p>
+    </div>
+    <a href="tel:+212624360624" class="header__phone link">
+      <Icon class="header__phone--icon icon" name="ph:phone-light" />
+       +212 123456789</a
+    >
+    <a href="/" class="header__cta"
+      >Get Your Ticket
+      <div class="header__cta--line"></div>
+      <div class="header__cta--line"></div>
+      <div class="header__cta--line"></div>
+      <div class="header__cta--line"></div>
+      <div class="header__cta--line"></div>
+    </a>
+    <button class="header__menu">
+      <input id="checkbox2" type="checkbox" />
+      <label class="toggle toggle2" for="checkbox2">
+        <div id="bar4" class="bars"></div>
+        <div id="bar5" class="bars"></div>
+        <div id="bar6" class="bars"></div>
+      </label>
+    </button>
+  </div>
+</header>
+<DropNav />
+<script src="../script/Nav.js"></script>

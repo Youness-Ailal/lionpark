@@ -1,0 +1,40 @@
+.map {
+  margin: 20rem 0;
+  &__title {
+    margin-bottom: 5rem;
+  }
+  &__container {
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+  }
+
+  &__bg-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  &__download {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    color: var(--dark-green);
+    font-size: 2rem;
+    align-self: end;
+    &:hover {
+      color: var(--normal-green);
+    }
+  }
+  &__icon {
+    height: 3rem;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+}

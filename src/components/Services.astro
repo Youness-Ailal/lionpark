@@ -1,0 +1,51 @@
+---
+import "../styles/Services.scss";
+import Icon from "astro-icon";
+import safari from "/icons/safari2.svg?url";
+import lion from "/icons/lion2.svg?url";
+import map from "/icons/map2.svg?url";
+import music from "/icons/music2.svg?url";
+import photo from "/icons/photo2.svg?url";
+import shop from "/icons/shop2.svg?url";
+---
+
+<section class="services">
+  <div class="container services__container">
+    <div class="services__left">
+      <h2 class="heading-second services__title">Plan a Visit</h2>
+      <p class="paragraph services__text">
+        Explore Morocco's fifth-largest zoo, covering 21 hectares. A single day
+        may not be enough to see all the exhibits. Use the map to choose the
+        animals you want to see, and find cafes and playgrounds if you're with
+        children. The zoo features 1,267 animal species in 35 exhibits and a Zoo
+        History Museum.
+      </p>
+    </div>
+    <div class="services__list">
+      <figure class="service">
+        <img class="service__icon" src={safari} alt="safari jeep icon" />
+        <p class="service__text">safari</p>
+      </figure>
+      <figure class="service">
+        <img class="service__icon" src={lion} alt="safari jeep icon" />
+        <p class="service__text">cages</p>
+      </figure>
+      <figure class="service">
+        <img class="service__icon" src={map} alt="safari jeep icon" />
+        <p class="service__text">mapping</p>
+      </figure>
+      <figure class="service">
+        <img class="service__icon" src={music} alt="safari jeep icon" />
+        <p class="service__text">Music</p>
+      </figure>
+      <figure class="service">
+        <img class="service__icon" src={photo} alt="safari jeep icon" />
+        <p class="service__text">photograph</p>
+      </figure>
+      <figure class="service">
+        <img class="service__icon" src={shop} alt="safari jeep icon" />
+        <p class="service__text">Gift Shop</p>
+      </figure>
+    </div>
+  </div>
+</section>

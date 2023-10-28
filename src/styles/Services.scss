@@ -1,0 +1,43 @@
+.services {
+  margin: 10rem 0;
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 10rem;
+  }
+  &__left {
+    padding-right: 10rem;
+    border-right: 2px dashed var(--super-dark-green);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__icon {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+  }
+  &__text {
+    color: var(--super-dark-green);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}

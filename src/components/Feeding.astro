@@ -1,0 +1,78 @@
+---
+import "../styles/Feeding.scss";
+import lion1 from "/images/lion1.jpg?url";
+import lion2 from "/images/lion7.jpg?url";
+import lion3 from "/images/lion3.jpg?url";
+import lion4 from "/images/lion4.jpg?url";
+import lion5 from "/images/lion5.jpg?url";
+import lion6 from "/images/lion6.jpg?url";
+import Icon from "astro-icon";
+---
+
+<section class="feeding">
+  <div class="container feeding__container">
+    <div class="feeding__left">
+      <h2 class="heading-second feeding__title">Feeding Schedule</h2>
+      <h3 class="heading-third feeding__title2">
+        Get up close with our animals during feeding sessions
+      </h3>
+      <p class="paragraph feeding__text">
+        Our animals choose between strolling in plain view of visitors or
+        seeking shelter. Join a feeding session for a guaranteed opportunity to
+        see your favorite animals. Watch our dedicated staff nourish the Arctic
+        fox, fox, bearded seal, and other enclosure residents. Our knowledgeable
+        keepers will share captivating stories about these incredible creatures.
+
+
+        <br />
+        <br />
+         Don't miss out – pick a date and arrive promptly!
+      </p>
+      <a class="cta feeding__cta" href="/Tickets">Pick up a Date</a>
+    </div>
+    <div class="feeding__right">
+      <div class="feeding__right--top">
+        <button class="select-btn-bg feeding__select selected">Today</button>
+        <button class="select-btn-bg feeding__select">Tomorrow</button>
+        <a href="#sub" class="feeding__sub"
+          >Subscribe for events news<Icon
+            class="icon feeding__icon"
+            name="ep:arrow-right"
+          /></a
+        >
+      </div>
+      <div class="feeding__right--bottom">
+        <div class="feeding__card">
+          <img src={lion1} alt="big lion " />
+          <p class="feeding__time">10:00</p>
+          <p class="feeding__name">Barbary lion</p>
+        </div>
+        <div class="feeding__card">
+          <img src={lion2} alt="big lion " />
+          <p class="feeding__time">12:00</p>
+          <p class="feeding__name">Cougar</p>
+        </div>
+        <div class="feeding__card">
+          <img src={lion3} alt="big lion " />
+          <p class="feeding__time">12:30</p>
+          <p class="feeding__name">A cub</p>
+        </div>
+        <div class="feeding__card">
+          <img src={lion4} alt="big lion " />
+          <p class="feeding__time">14:00</p>
+          <p class="feeding__name">Bengal tiger</p>
+        </div>
+        <div class="feeding__card">
+          <img src={lion5} alt="big lion " />
+          <p class="feeding__time">14:30</p>
+          <p class="feeding__name">White lion</p>
+        </div>
+        <div class="feeding__card">
+          <img src={lion6} alt="big lion " />
+          <p class="feeding__time">16:00</p>
+          <p class="feeding__name">Black tiger</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

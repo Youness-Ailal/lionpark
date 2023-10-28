@@ -1,0 +1,28 @@
+---
+import "../styles/Location.scss";
+import Icon from "astro-icon";
+---
+
+<section class="location" id="location">
+  <div class="location__container">
+    <div class="location__top">
+      <h2 class="heading-second location__title">Where Are We?</h2>
+    </div>
+    <div class="location__mid">
+      <p class="paragraph location__p">
+        <Icon class="icon location__p--icon" name="mi:location" />Drarga street
+        1, Agadir Morocco
+      </p>
+      <div class="open location__open">
+        <div class="open--dot">
+          <div class="open--dot-bg"></div>
+        </div>
+        <p class="open--p">open daily 9:00 to 17:00 (GMT+1)</p>
+      </div>
+    </div>
+    <div class="location__bottom">
+      <div id="map"></div>
+    </div>
+  </div>
+</section>
+<script src="../script/location.js"></script>

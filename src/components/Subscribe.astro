@@ -1,0 +1,34 @@
+---
+import "../styles/Subscribe.scss";
+import lion3 from "/images/lion3.jpg?url";
+---
+
+<secion class="subscribe" id="sub">
+  <div class="container subscribe__container">
+    <div class="subscribe__left">
+      <h2 class="heading-second subscribe__title">
+        Subscribe for Latest News & More
+      </h2>
+      <p class="paragraph subscribe__p">
+        Stay connected with all things lion-related at our zoo. Subscribe to
+        receive the latest news on feeding times, special discounts, and more.
+        Be the first to know when our majestic lions roar and when fantastic
+        savings come your way. Subscribe now for an adventure like no other.
+      </p>
+      <form action="">
+        <input
+          type="email"
+          name=""
+          id="email"
+          placeholder="Your Email..."
+          required
+        />
+
+        <button type="submit" class="cta">Subscribe</button>
+      </form>
+    </div>
+    <div class="subscribe__right">
+      <img src={lion3} alt="lionet from our lion zoo" />
+    </div>
+  </div>
+</secion>

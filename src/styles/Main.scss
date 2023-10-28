@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "interphase";
+  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Light.ttf");
+  font-weight: 300;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "interphase";
+  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
+  font-weight: 400;
+
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "interphase";
+  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
+  font-weight: 500;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "interphase";
+  src: url("../../public/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
+  font-weight: 600;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "interphase";
+  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
+  font-weight: 700;
+  font-size: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fefefb;
+  --bg-color: #fcfdf6;
+  --super-dark-green: #0b2d17;
+  --dark-green: #063718;
+  --text-color: #124a26;
+  --orange: #f97316;
+  --orange-hover: #d55f0b;
+  --normal-green: #87b139;
+  --normal-green-hover: #648828;
+  --light-green: #e3f1bc;
+  --super-light-green: #f5f8e2;
+  --light-grey: #d1d5db;
+  --grey: #6b7280;
+  --body-overflow: auto;
+}
+html {
+  font-size: clamp(8px, 1vw, 10px);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  position: relative;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+a,
+button {
+  transition: 0.2s;
+  cursor: pointer;
+  &:active {
+    scale: 0.95;
+  }
+}
+img {
+  object-fit: cover;
+}
+body {
+  background-color: var(--bg-color);
+  line-height: 1.4;
+  font-family: interphase, sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+
+  // overflow: var(--body-overflow);
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-size: 6rem;
+  font-weight: bold;
+}

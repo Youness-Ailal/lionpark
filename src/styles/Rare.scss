@@ -1,0 +1,52 @@
+.rare {
+  margin: 20rem 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  &__text {
+  }
+  &__cta {
+    align-self: start;
+    background-color: var(--normal-green);
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+    position: relative;
+    &:hover {
+      background-color: var(--normal-green-hover);
+    }
+  }
+  &__left {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  &__video {
+    &--container {
+      // height: 100%;
+      // width: 100%;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+  }
+}
+.green-theme {
+  color: green;
+  background-color: green;
+}
