@@ -1,0 +1,27 @@
+---
+import "../styles/Tickets.scss";
+import "../styles/Picka.scss";
+---
+
+<section class="tickets">
+  <div class="container tickets__container">
+    <div class="tickets__top">
+      <h2 class="heading-second tickets__title">Purchase Your tickets</h2>
+      <div class="tickets__options">
+        <button class="select-btn selected">Online</button>
+        <button class="select-btn">Office</button>
+      </div>
+    </div>
+    <div class="tickets__bottom">
+      <div class="tickets__left">
+        <h4 class="heading-third tickets__step">1. Pick a date</h4>
+        <div class="tickets__picker-container">
+          <input type="text" id="datepicker" autocomplete="off" />
+        </div>
+      </div>
+      <h4 class="heading-third tickets__step">2. Choose tickets</h4>
+      <div class="tickets__right"></div>
+    </div>
+  </div>
+</section>
+<script src="../script//tickets.js"></script>
