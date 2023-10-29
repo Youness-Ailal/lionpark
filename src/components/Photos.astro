@@ -7,6 +7,7 @@ import photo4 from "/images/gallery4.jpg?url";
 import photo5 from "/images/gallery5.jpg?url";
 import photo6 from "/images/gallery6.jpg?url";
 import photo7 from "/images/gallery7.jpg?url";
+import Icon from "astro-icon";
 ---
 
 <section class="gallery">
@@ -38,16 +39,68 @@ import photo7 from "/images/gallery7.jpg?url";
       </a>
     </div>
     <div class="week">
-      <div class="week__left">
-        <h2 class="heading-second week__title">Photo of the Week</h2>
-        <h3 class="heading-third week__title2">by Sarah</h3>
-        <p class="paragraph week__text">
-          The winner will receive a 50% discount on the next visit to the park!*
-        </p>
-        <button class="cta week__button">Send Your Photo</button>
+      <div class="week__content">
+        <div class="week__left">
+          <h2 class="heading-second week__title">Photo of the Week</h2>
+          <h3 class="heading-third week__title2">by Sarah</h3>
+          <p class="paragraph week__text">
+            The winner will receive a 50% discount on the next visit to the
+            park!*
+          </p>
+          <button class="cta week__button">Send Your Photo</button>
+        </div>
+        <div class="week__right">
+          <img src={photo7} alt="photo of the week" />
+        </div>
       </div>
-      <div class="week__right">
-        <img src={photo7} alt="photo of the week" />
+      <div class="week__submit">
+        <h2 class="heading-second">Submit Your Photo</h2>
+        <form action="" class="week__form">
+          <div class="week__form--top">
+            <input
+              type="text"
+              name="name"
+              id="week__name"
+              placeholder="Name"
+              required
+            />
+            <input
+              required
+              type="email"
+              name=""
+              id="week__email"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="week__form--mid">
+            <label for="week__file" class="week__form--label"
+              ><Icon
+                class="icon week__form--label-icon"
+                name="ep:upload-filled"
+              />
+              <p class="week__file--text">Click or Drag an image</p></label
+            >
+            <input
+              type="file"
+              name=""
+              id="week__file"
+              required
+              accept="image/*"
+            />
+          </div>
+          <div class="week__form--bottom">
+            <button type="button" class="cta week__form--bottom-back"
+              >Go Back</button
+            >
+            <button class="cta" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="week__done hidden-week">
+        <Icon class="icon week__done--icon" name="ion:cloud-done-outline" />
+        <h2 class="heading-second">We Received Your Image!</h2>
+        <h3 class="heading-third">We'll let you know if you win by email</h3>
+        <button class="cta message-back">Go back</button>
       </div>
     </div>
     <p class="paragraph week__desc">
@@ -58,3 +111,4 @@ import photo7 from "/images/gallery7.jpg?url";
     </p>
   </div>
 </section>
+<script src="../script//gallery.js"></script>
