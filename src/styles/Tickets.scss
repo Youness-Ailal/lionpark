@@ -208,80 +208,34 @@
   }
 }
 
-.payment {
-  min-width: 100%;
-  transition: 0.3s;
-  transform: translateX(-100%);
-  padding: 4rem 5rem;
-  &__title {
-    margin-bottom: 3rem;
+.cta-loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--light-green-2);
+  border-radius: 1rem;
+  &::after {
+    content: "";
+    height: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 20rem;
+    border: 0.5rem solid var(--normal-green);
+    border-right-color: var(--dark-green);
+    animation: spinner 0.5s infinite linear;
   }
-  &__bottom {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 8rem;
-  }
-  &__left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  &__persons {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--grey);
-    border-color: rgb(11, 45, 23, 0.3);
-  }
-  &__person {
-    strong {
-      font-weight: 600;
-    }
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-    // justify-items: center;
-    font-size: 2rem;
+}
 
-    &:last-child &--left {
-      display: block;
-      min-width: 10rem;
-    }
-    &:last-child &--left {
-      display: grid;
-      grid-template-columns: 7rem 1.5rem 1.5rem;
-      align-items: center;
-    }
-    &--mid {
-      height: 1px;
-      border-top: 1px dashed rgb(11, 45, 23, 0.3);
-    }
-    &--total {
-      font-weight: 500;
-      strong {
-        font-weight: 500;
-      }
-    }
+@keyframes spinner {
+  from {
+    rotate: 0;
   }
-  &__summary {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    &--text {
-      font-size: 2.8rem;
-      font-weight: 600;
-    }
-    &--total {
-      font-size: 2.8rem;
-      font-weight: 600;
-      strong {
-        font-weight: 600;
-      }
-    }
+  to {
+    rotate: 1turn;
   }
 }

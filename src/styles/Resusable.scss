@@ -132,6 +132,9 @@ input {
   &:hover {
     background-color: var(--normal-green-hover);
   }
+  &:disabled {
+    scale: 1;
+  }
 }
 .big-button {
   text-transform: uppercase;
@@ -159,6 +162,9 @@ input {
   &:hover {
     background-color: var(--orange-hover);
   }
+}
+.hidden {
+  display: none;
 }
 .open {
   font-weight: 500;

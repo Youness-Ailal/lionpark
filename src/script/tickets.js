@@ -88,29 +88,11 @@ const stripeApi =
   "pk_test_51O6xToGO0uX1lkUYGeUfOo4Er1HVlK4qe6kODVByl4aIWwbl7lI0O0ZfzlFlmpn4eiKLJqa8ZATGv2mywYtgWW3n008O7XYPFf";
 
 const stripe = Stripe(stripeApi);
-console.log(stripe);
+const toPaymentButton = document.querySelector(".to-payment");
+const toPaymentLoading = document.querySelector(".cta-loading");
 ticketMembersForm.addEventListener("submit", async e => {
   e.preventDefault();
 
-  // const session = await stripe.checkout.sessions.create({
-  //   payment_method_types: ["card"],
-  //   line_items: [
-  //     {
-  //       price: "price_1O6yaKGO0uX1lkUYKFC0VoTZ",
-  //       quantity: Number(adultInput.value),
-  //     },
-  //     {
-  //       price: "price_1O6yaKGO0uX1lkUYKFC0VoTZ",
-  //       quantity: Number([...kidsInputs][0].value),
-  //     },
-  //     {
-  //       price: "price_1O6yacGO0uX1lkUYnhA7CcKV",
-  //       quantity: Number([...kidsInputs][1].value),
-  //     },
-  //   ],
-  //   mode: "payment",
-  //   success_url: "https://lionpark.netlify.app/",
-  // });
   const orderItems = [
     {
       price: "price_1O6yaKGO0uX1lkUYKFC0VoTZ",
@@ -134,6 +116,9 @@ ticketMembersForm.addEventListener("submit", async e => {
   const validLineItems = orderItems.filter(item => {
     return item.quantity > 0;
   });
+
+  toPaymentButton.disabled = true;
+  toPaymentLoading.classList.remove("hidden");
   const { error } = await stripe.redirectToCheckout({
     lineItems: validLineItems,
     mode: "payment",
@@ -144,4 +129,6 @@ ticketMembersForm.addEventListener("submit", async e => {
   if (error) {
     console.error(error);
   }
+  toPaymentButton.disabled = false;
+  toPaymentLoading.classList.add("hidden");
 });
