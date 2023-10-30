@@ -24,7 +24,9 @@ const navTl = gsap.timeline();
 const showNav = function () {
   dropNav.classList.remove("hidden-drop");
   dropBg.classList.remove("hidden-bg");
-  document.body.style.overflowY = "hidden";
+  dropNav.style.display = "flex";
+  // document.body.style.overflowY = "hidden";
+  document.documentElement.style.setProperty("--body-overflow", "hidden");
   navButton.checked = true;
 
   navTl
@@ -66,7 +68,9 @@ const showNav = function () {
     );
 };
 const hideNav = function () {
-  document.body.style.overflowY = "auto";
+  // document.body.style.overflowY = "auto";
+  document.documentElement.style.setProperty("--body-overflow", "auto");
+
   navButton.checked = false;
 
   navTl
@@ -110,7 +114,8 @@ const hideNav = function () {
   // dropNav.classList.add("hidden-drop");
   setTimeout(() => {
     dropBg.classList.add("hidden-bg");
-  }, 500);
+    dropNav.style.display = "none";
+  }, 1000);
   document.documentElement.style.setProperty("--body-overflow", "auto");
 };
 navButton.addEventListener("change", e => {

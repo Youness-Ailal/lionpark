@@ -60,7 +60,7 @@
   --body-overflow: auto;
 }
 html {
-  font-size: clamp(7px, 1vw, 10px);
+  font-size: clamp(8px, 1vw, 10px);
 
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -93,9 +93,9 @@ body {
   font-family: interphase, sans-serif;
   font-weight: 500;
   color: var(--text-color);
-
-  // overflow: var(--body-overflow);
-  overflow-x: hidden;
+  overflow-y: var(--body-overflow);
+  overflow-x: hidden !important;
+  max-width: 100dvw;
 }
 
 .main-title {

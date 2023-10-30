@@ -102,8 +102,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
     button {
       font-size: 2rem;
+      margin-left: auto;
     }
   }
   &__total {
@@ -114,6 +117,11 @@
     }
     display: flex;
     align-items: center;
+  }
+  &__email {
+    @media (max-width: 450px) {
+      width: 100%;
+    }
   }
 }
 .person {
@@ -152,6 +160,10 @@
     grid-template-columns: 1.5fr 2fr;
     gap: 2rem;
     flex-wrap: wrap;
+    @media (max-width: 450px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
     input {
       padding: 1.2rem;
     }
@@ -170,7 +182,7 @@
     button {
       align-self: center;
       padding: 0;
-      height: 3.4rem;
+      height: 3.6rem;
       font-weight: 400;
       aspect-ratio: 1;
       border-radius: 50rem;
