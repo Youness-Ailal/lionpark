@@ -12,16 +12,152 @@ import "../styles/Picka.scss";
         <button class="select-btn">Office</button>
       </div>
     </div>
-    <div class="tickets__bottom">
-      <div class="tickets__left">
-        <h4 class="heading-third tickets__step">1. Pick a date</h4>
-        <div class="tickets__picker-container">
-          <input type="text" id="datepicker" autocomplete="off" />
+    <div class="tickets__steps">
+      <div class="tickets__bottom">
+        <!-- <div class="ticket-message hidden-ticket__message">Hi there</div>
+      <div class="ticket-message__bg"></div> -->
+        <div class="tickets__left">
+          <h4 class="heading-third tickets__step">1. Pick a date</h4>
+          <div class="tickets__picker-container">
+            <input type="text" id="datepicker" autocomplete="off" />
+          </div>
         </div>
+        <form id="ticket-members-form" class="tickets__right ticket">
+          <h4 class="heading-third tickets__step">2. Choose tickets</h4>
+          <div class="ticket__persons">
+            <div class="person">
+              <p class="paragraph person__age">
+                Adults <span>(18+ years)</span>
+              </p>
+              <p class="paragraph person__price">35 MAD</p>
+              <div class="person__qt">
+                <button type="button" class="cta person__minest">-</button>
+                <input
+                  class="person-input"
+                  type="number"
+                  name=""
+                  id="adult-input"
+                  value="1"
+                />
+                <button type="button" class="cta person__plus">+</button>
+              </div>
+            </div>
+            <div class="person">
+              <p class="paragraph person__age">
+                Kids <span>(4-17 years)</span>
+              </p>
+              <p class="paragraph person__price">20 MAD</p>
+              <div class="person__qt">
+                <button type="button" class="cta person__minest">-</button>
+                <input
+                  class="person-input"
+                  type="number"
+                  name=""
+                  id="kid-input"
+                  value="0"
+                />
+                <button type="button" class="cta person__plus">+</button>
+              </div>
+            </div>
+            <div class="person">
+              <p class="paragraph person__age">
+                Babies <span>(0-4 years)</span>
+              </p>
+              <p class="paragraph person__price">00 MAD</p>
+              <div class="person__qt">
+                <button type="button" class="cta person__minest">-</button>
+                <input
+                  class="person-input"
+                  type="number"
+                  name=""
+                  id="kid-input"
+                  value="0"
+                />
+                <button type="button" class="cta person__plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="person__email">
+            <div class="person__email--text">
+              <p class="person__email--text-top">Email Address</p>
+              <p class="person__email--text-bottom">
+                tickets will be sent to this email*
+              </p>
+            </div>
+            <input
+              type="email"
+              class="ticket__email"
+              placeholder="Email@example.com"
+              required
+            />
+          </div>
+          <div class="ticket__bottom">
+            <div class="ticket__total">
+              <h4 class="ticket__total--text heading-third">
+                Total: <span class="ticket__total--price">35</span> MAD
+              </h4>
+            </div>
+            <button class="cta">Go To Payment</button>
+          </div>
+        </form>
       </div>
-      <h4 class="heading-third tickets__step">2. Choose tickets</h4>
-      <div class="tickets__right"></div>
+      <!-- <div class="payment">
+        <h1 class="heading-third payment__title">3. Payment Details</h1>
+        <div class="payment__bottom">
+          <div class="payment__left">
+            <div class="payment__persons">
+              <div class="payment__person">
+                <p class="payment__person--left">
+                  Adults <span>:</span>
+                  <strong>1</strong>
+                </p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total"><strong>35</strong> Mad</p>
+              </div>
+              <div class="payment__person">
+                <p class="payment__person--left">
+                  Kids <span>:</span>
+                  <strong>0</strong>
+                </p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total"><strong>00</strong> Mad</p>
+              </div>
+              <div class="payment__person">
+                <p class="payment__person--left">
+                  Babies <span>:</span>
+                  <strong>0</strong>
+                </p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total"><strong>00</strong> Mad</p>
+              </div>
+              <div class="payment__person">
+                <p class="payment__person--left">Discount</p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total"><strong>00</strong> Mad</p>
+              </div>
+            </div>
+            <div class="payment__summary">
+              <div class="payment__person">
+                <p class="payment__person--left">Tax</p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total"><strong>00</strong> Mad</p>
+              </div>
+              <div class="payment__person">
+                <p class="payment__person--left payment__summary--text">
+                  Total
+                </p>
+                <span class="payment__person--mid"></span>
+                <p class="payment__person--total payment__summary--total">
+                  <strong>35</strong> Mad
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="payment__right"></div>
+        </div>
+      </div> -->
     </div>
   </div>
 </section>
-<script src="../script//tickets.js"></script>
+<script src="../script/tickets.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
