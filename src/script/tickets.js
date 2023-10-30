@@ -129,6 +129,8 @@ ticketMembersForm.addEventListener("submit", async e => {
   if (error) {
     console.error(error);
   }
-  toPaymentButton.disabled = false;
-  toPaymentLoading.classList.add("hidden");
+  stripe.on("redirect_status", s => {
+    toPaymentButton.disabled = false;
+    toPaymentLoading.classList.add("hidden");
+  });
 });
