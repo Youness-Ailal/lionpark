@@ -1,21 +1,20 @@
 ---
 import "../styles/Tickets.scss";
 import "../styles/Picka.scss";
+import Location from "./Location.astro";
 ---
 
 <section class="tickets">
   <div class="container tickets__container">
     <div class="tickets__top">
       <h2 class="heading-second tickets__title">Purchase Your tickets</h2>
-      <div class="tickets__options">
+      <!-- <div class="tickets__options">
         <button class="select-btn selected">Online</button>
         <button class="select-btn">Office</button>
-      </div>
+      </div> -->
     </div>
     <div class="tickets__steps">
       <div class="tickets__bottom">
-        <!-- <div class="ticket-message hidden-ticket__message">Hi there</div>
-      <div class="ticket-message__bg"></div> -->
         <div class="tickets__left">
           <h4 class="heading-third tickets__step">1. Pick a date</h4>
           <div class="tickets__picker-container">
@@ -104,6 +103,7 @@ import "../styles/Picka.scss";
           </div>
         </form>
       </div>
+      <div class="ticket__office"></div>
     </div>
   </div>
 </section>

@@ -18,8 +18,8 @@ L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
 
 const customIcon = L.divIcon({
   className: "custom-marker",
-  html: `<img class="custom-marker" src="../../public/icons/marker.svg"  />`,
-  iconAnchor: [40, 40],
+  html: `<div class="custom-marker" ></div>`,
+  iconAnchor: [30, 30],
 });
 const marker = L.marker([30.391799720263787, -9.478511961375869], {
   icon: customIcon,
