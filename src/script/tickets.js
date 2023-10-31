@@ -12,10 +12,6 @@ const picker = new Pikaday({
   setDefaultDate: true,
   minDate: today,
 });
-document.querySelector(".select-btn.selected").addEventListener("click", () => {
-  console.log(picker.getDate());
-});
-
 //Handles Inputs min values
 const kidsInputs = document.querySelectorAll("#kid-input");
 const adultInput = document.querySelector("#adult-input");
