@@ -27,7 +27,8 @@ const showNav = function () {
   dropNav.style.display = "flex";
   // document.body.style.overflowY = "hidden";
   document.documentElement.style.setProperty("--body-overflow", "hidden");
-  navButton.checked = true;
+  // navButton.checked = true;
+  console.log("opening nav");
 
   navTl
     .fromTo(
@@ -71,7 +72,8 @@ const hideNav = function () {
   // document.body.style.overflowY = "auto";
   document.documentElement.style.setProperty("--body-overflow", "auto");
 
-  navButton.checked = false;
+  // navButton.checked = false;
+  console.log("closing nav");
 
   navTl
     .fromTo(
