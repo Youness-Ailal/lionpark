@@ -1,5 +1,6 @@
 ---
 import mapBg from "/images/map-bg.svg?url";
+import lowImage from "/images/lowqt.svg?url";
 import "../styles/Map.scss";
 import Icon from "astro-icon";
 ---
@@ -20,7 +21,12 @@ import Icon from "astro-icon";
         <div class="lazy-loader">
           <div class="lazy-spinner"></div>
         </div>
-        <img class="map__bg-map lazy" data-src={mapBg} alt="lion park map" />
+        <img
+          class="map__bg-map lazy"
+          src={lowImage}
+          data-src={mapBg}
+          alt="lion park map"
+        />
       </div>
     </div>
   </div>
