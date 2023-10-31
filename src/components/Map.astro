@@ -1,5 +1,6 @@
 ---
 import mapBg from "/images/map-bg.svg?url";
+import mapBglow from "/images/map-bg-low.jpg?url";
 import "../styles/Map.scss";
 import Icon from "astro-icon";
 ---
@@ -17,7 +18,13 @@ import Icon from "astro-icon";
         />
       </a>
 
-      <img class="map__bg-map" src={mapBg} alt="lion park map" loading="lazy" />
+      <img
+        class="map__bg-map lazy"
+        src={mapBglow}
+        data-src={mapBg}
+        alt="lion park map"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
