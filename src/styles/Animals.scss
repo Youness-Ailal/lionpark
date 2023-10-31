@@ -1,0 +1,109 @@
+.animals {
+  &__container {
+  }
+  &__title {
+    margin-bottom: 5rem;
+  }
+  &__item {
+    height: 50rem;
+    width: 40rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid var(--normal-green-hover);
+    position: relative;
+    box-shadow: 0 0 5rem 1rem rgb(63, 83, 33, 0.1);
+    animation: animateShadow 1s infinite linear;
+    &:hover img {
+      scale: 1.05;
+    }
+    // &:hover &__icon:first-child {
+    //   translate: -50% -50%;
+    // }
+    // &:hover &__icon:last-child {
+    //   translate: 20% -120%;
+    // }
+    &::after {
+      content: "";
+      height: 120%;
+      width: 120%;
+      border-radius: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+    }
+  }
+  &__image {
+    transition: 0.2s ease-out;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 40%;
+    border-radius: 1rem;
+  }
+  &__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(
+      to top,
+      rgb(11, 45, 23, 0.9),
+      rgb(11, 45, 23, 0.6),
+      rgb(11, 45, 23, 0.4),
+      transparent
+    );
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    &:active {
+      scale: 1;
+    }
+  }
+  &__name {
+    font-size: 3rem;
+
+    color: var(--light-green);
+    opacity: 0.8;
+    font-weight: 700;
+  }
+  &__seemore {
+    border-radius: 1rem;
+    margin-left: auto;
+    color: var(--light-green);
+    min-height: 4rem;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  &__icon {
+    height: 4rem;
+  }
+  &__list {
+    max-width: 140rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+  }
+}
+
+@keyframes animateShadow {
+  0% {
+    box-shadow: 0 0 4rem 1rem rgb(63, 83, 33, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 6em 1.5rem rgb(63, 83, 33, 0.15);
+  }
+  100% {
+    box-shadow: 0 0 4rem 1rem rgb(63, 83, 33, 0.1);
+  }
+}

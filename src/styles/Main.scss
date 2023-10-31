@@ -1,13 +1,13 @@
 @font-face {
   font-family: "interphase";
-  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Light.ttf");
+  src: url("/fonts/TT-Interphases-Pro-Trial-Light.ttf");
   font-weight: 300;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "interphase";
-  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
+  src: url("/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
   font-weight: 400;
 
   font-size: normal;
@@ -15,21 +15,21 @@
 }
 @font-face {
   font-family: "interphase";
-  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
+  src: url("/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
   font-weight: 500;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "interphase";
-  src: url("../../public/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
+  src: url("/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
   font-weight: 600;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "interphase";
-  src: url("../../public/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
+  src: url("/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
   font-weight: 700;
   font-size: normal;
   font-display: swap;
@@ -117,4 +117,46 @@ body {
 }
 ::-webkit-scrollbar-track {
   background-color: var(--light-green);
+}
+
+.lazy-loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 1;
+  transition: 1s;
+}
+.lazy-spinner {
+  height: 4rem;
+  aspect-ratio: 1;
+
+  border-radius: 50rem;
+  border: 4px solid var(--light-green);
+  border-right: 4px solid var(--normal-green-hover);
+  animation: spinner 0.3s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 1turn;
+  }
+}
+
+.hidden-loader {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  div {
+    display: none;
+  }
 }

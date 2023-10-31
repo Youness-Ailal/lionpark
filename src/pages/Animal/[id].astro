@@ -1,0 +1,51 @@
+---
+import animalsJson from "../../../public/Animals.json";
+import MainLayout from "../../Layouts/MainLayout.astro";
+
+const animals = animalsJson;
+const animal = animals.find(el => el.id === Number(Astro.params.id));
+const restAnimals = animals.filter(el => el.id !== Number(Astro.params.id));
+---
+
+<MainLayout title={animal.name}>
+  <section class="animal">
+    <div class="container animal__container">
+      <img data-src={animal?.image_1} alt={animal.lifespan} class="lazy" />
+      <h3 class="heading-third">{animal?.name}</h3>
+    </div>
+  </section>
+  <section class="animal">
+    <div class="container animal__container">
+      <div class="animals__list">
+        {
+          restAnimals.map(el => {
+            return (
+              <a href={`/Animal/${el.id}`}>
+                <img
+                  src={el.image_1}
+                  alt=""
+                  height="400"
+                  width="300"
+                  transition:name="cati"
+                />
+                <h3 class="heading-third">{el.name}</h3>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style lang="scss">
+  .animal {
+    &__container {
+      max-width: 100rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>

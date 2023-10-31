@@ -248,12 +248,3 @@
     animation: spinner 0.5s infinite linear;
   }
 }
-
-@keyframes spinner {
-  from {
-    rotate: 0;
-  }
-  to {
-    rotate: 1turn;
-  }
-}
