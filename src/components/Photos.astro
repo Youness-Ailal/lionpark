@@ -17,25 +17,43 @@ import Icon from "astro-icon";
     </h1>
     <div class="gallery__photos">
       <div class="gallery__photo">
-        <img src={photo1} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo1} alt="Photo of a big wild cat" />
       </div>
       <div class="gallery__photo">
-        <img src={photo2} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo2} alt="Photo of a big wild cat" />
       </div>
       <div class="gallery__photo">
-        <img src={photo3} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo3} alt="Photo of a big wild cat" />
       </div>
       <div class="gallery__photo">
-        <img src={photo4} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo4} alt="Photo of a big wild cat" />
       </div>
       <div class="gallery__photo">
-        <img src={photo5} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo5} alt="Photo of a big wild cat" />
       </div>
       <a
         target="_blank"
         href="https://www.instagram.com/natgeomagarab/"
         class="gallery__photo">
-        <img src={photo6} alt="Photo of a big wild cat" />
+        <div class="lazy-loader">
+          <div class="lazy-spinner"></div>
+        </div>
+        <img class="lazy" data-src={photo6} alt="Photo of a big wild cat" />
       </a>
     </div>
     <div class="week">
@@ -50,7 +68,10 @@ import Icon from "astro-icon";
           <button class="cta week__button">Send Your Photo</button>
         </div>
         <div class="week__right">
-          <img src={photo7} alt="photo of the week" />
+          <div class="lazy-loader">
+            <div class="lazy-spinner"></div>
+          </div>
+          <img class="lazy" data-src={photo7} data-alt="photo of the week" />
         </div>
       </div>
       <div class="week__submit">

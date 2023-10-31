@@ -109,6 +109,8 @@
     flex: 0 0 35rem;
     // user-select: none;
     overflow: hidden;
+    position: relative;
+    border: 1px solid var(--normal-green);
 
     img {
       height: 100%;
