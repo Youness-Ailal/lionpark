@@ -16,12 +16,7 @@
     &:hover img {
       scale: 1.05;
     }
-    // &:hover &__icon:first-child {
-    //   translate: -50% -50%;
-    // }
-    // &:hover &__icon:last-child {
-    //   translate: 20% -120%;
-    // }
+
     &::after {
       content: "";
       height: 120%;
@@ -85,7 +80,7 @@
     height: 4rem;
   }
   &__list {
-    max-width: 140rem;
+    // max-width: 140rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 4rem;

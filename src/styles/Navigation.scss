@@ -104,7 +104,7 @@
   display: none;
 }
 
-.toggle2 {
+.toggle {
   position: relative;
   height: 4.5rem;
   aspect-ratio: 1;
@@ -133,29 +133,29 @@
   // width: 80%;
 }
 
-#checkbox2:checked + .toggle2 .bars {
+.toggle.activenav .bars {
   position: absolute;
   transition-duration: 0.5s;
 }
 
-#checkbox2:checked + .toggle2 #bar5 {
+.toggle.activenav #bar5 {
   transform: scaleX(0);
   transition-duration: 0.5s;
 }
 
-#checkbox2:checked + .toggle2 #bar4 {
+.toggle.activenav #bar4 {
   // width: 100%;
   transform: rotate(45deg);
   transition-duration: 0.5s;
 }
 
-#checkbox2:checked + .toggle2 #bar6 {
+.toggle.activenav #bar6 {
   // width: 100%;
   transform: rotate(-45deg);
   transition-duration: 0.5s;
 }
 
-#checkbox2:checked + .toggle2 {
+.toggle.activenav {
   transition-duration: 0.5s;
   transform: rotate(180deg);
 }

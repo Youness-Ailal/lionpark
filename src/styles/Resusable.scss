@@ -93,10 +93,12 @@
 
 .container {
   min-width: 95vw;
-  margin-top: 4rem;
   // overflow-x: hidden;
   max-width: 160rem;
   padding: 0 5rem;
+
+  margin: 0 auto;
+  margin-top: 4rem;
   @media (max-width: 1060px) {
     padding: 0 3rem;
   }

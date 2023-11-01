@@ -17,17 +17,17 @@ window.onresize = e => {
 // Handles Dropdown Navigation
 const dropBg = document.querySelector(".dropdown__bg");
 const dropNav = document.querySelector(".dropdown");
-const navButton = document.querySelector("#checkbox2");
+const navButton = document.querySelector(".header__menu");
 const navItems = document.querySelectorAll(".dropdown__item");
+const toggle = document.querySelector(".toggle");
 const navTl = gsap.timeline();
-
-const showNav = function () {
+const showNav = function (e) {
+  navButton.disabled = true;
   dropNav.classList.remove("hidden-drop");
   dropBg.classList.remove("hidden-bg");
   dropNav.style.display = "flex";
-  // document.body.style.overflowY = "hidden";
   document.documentElement.style.setProperty("--body-overflow", "hidden");
-  // navButton.checked = true;
+  toggle.classList.add("activenav");
   console.log("opening nav");
 
   navTl
@@ -67,12 +67,15 @@ const showNav = function () {
       },
       "<"
     );
+  setTimeout(() => {
+    navButton.disabled = false;
+  }, 900);
 };
-const hideNav = function () {
-  // document.body.style.overflowY = "auto";
+const hideNav = function (e) {
+  navButton.disabled = true;
   document.documentElement.style.setProperty("--body-overflow", "auto");
+  toggle.classList.remove("activenav");
 
-  // navButton.checked = false;
   console.log("closing nav");
 
   navTl
@@ -114,16 +117,23 @@ const hideNav = function () {
       "<"
     );
   // dropNav.classList.add("hidden-drop");
+
+  setTimeout(() => {
+    navButton.disabled = false;
+  }, 800);
   setTimeout(() => {
     dropBg.classList.add("hidden-bg");
     dropNav.style.display = "none";
+    navButton.disabled = false;
   }, 1000);
   document.documentElement.style.setProperty("--body-overflow", "auto");
 };
-navButton.addEventListener("change", e => {
-  if (e.currentTarget.checked) {
-    showNav();
+let isNavOpened = false;
+navButton.addEventListener("click", e => {
+  if (!isNavOpened) {
+    showNav(e);
   } else {
-    hideNav();
+    hideNav(e);
   }
+  isNavOpened = !isNavOpened;
 });

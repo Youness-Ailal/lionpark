@@ -118,8 +118,8 @@ ticketMembersForm.addEventListener("submit", async e => {
   const { error } = await stripe.redirectToCheckout({
     lineItems: validLineItems,
     mode: "payment",
-    successUrl: "https://lionpark.netlify.app/",
-    cancelUrl: "https://lionpark.netlify.app/tickets/",
+    successUrl: "https://lionpark.netlify.app",
+    cancelUrl: "https://lionpark.netlify.app/Tickets",
   });
 
   if (error) {

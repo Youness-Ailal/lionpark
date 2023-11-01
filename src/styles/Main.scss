@@ -75,6 +75,9 @@ a {
 button {
   background-color: transparent;
   border: none;
+  &:disabled {
+    scale: 1;
+  }
 }
 a,
 button {

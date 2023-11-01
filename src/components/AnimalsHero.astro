@@ -2,6 +2,7 @@
 import "../styles/Animals.scss";
 import animalsJson from "../../public/Animals.json";
 import Icon from "astro-icon";
+import Loader from "../components/Loader.astro";
 const animals = animalsJson;
 ---
 
@@ -13,14 +14,13 @@ const animals = animalsJson;
         animals.map(animal => {
           return (
             <li class="animals__item">
-              <div class="lazy-loader">
-                <div class="lazy-spinner" />
-              </div>
+              <Loader />
               <a class="animals__link" href={`/Animal/${animal.id}`}>
                 <img
                   class="animals__image lazy"
                   data-src={animal.image_1}
                   alt={animal.lifespan}
+                  transition:name="animalphoto"
                 />
                 <a href={`/Animal/${animal.id}`} class="animals__details">
                   <p class="animals__name">{animal.name}</p>
