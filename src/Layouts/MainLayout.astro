@@ -1,10 +1,13 @@
 ---
-const { title, description = "Welcome to Lion park zoo at Agadir" } =
-  Astro.props;
+const desc =
+  "Observe majestic African lions up close at the only lion park in Agadir, Morocco. A unique and thrilling family wildlife experience.";
+const { title, description = desc } = Astro.props;
+const completeTitle = `${title} | Lion Park Agadir `;
 import "../styles/Main.scss";
 import "../styles/Resusable.scss";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
@@ -12,8 +15,34 @@ import Footer from "../components/Footer.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SEO
+      canonical="https://lionpark.netlify.app"
+      openGraph={{
+        article: {
+          authors: ["Youness Ailal"],
+          publishedTime: "01 November 2023",
+        },
+        basic: {
+          title: "Lion Park Agadir - Get Close to Wild Lions",
+          type: "website",
+          url: "https://lionparkagadir.com",
+          image:
+            "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        imageAlt: "Lynxes are medium-sized felids",
+        site: "https://lionpark.netlify.app",
+        creator: "@younessailal",
+        image:
+          "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      }}
+    />
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
-    <title>{`${title} | Lion Park Agadir`}</title>
+    <title>{`${completeTitle} | Lion Park Agadir`}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <Navigation />
