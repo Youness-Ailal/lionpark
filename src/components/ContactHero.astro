@@ -1,0 +1,106 @@
+---
+import "../styles/Contact.scss";
+import Icon from "astro-icon";
+---
+
+<section class="contact">
+  <div class="container contact__container">
+    <h2 class="heading-second contact__title page-title">Drop us a Message</h2>
+    <div class="contact__content">
+      <div class="contact__left">
+        <form class="contact__form">
+          <div class="contact__form--field">
+            <input type="text" required id="contact_name" placeholder="Name" />
+            <!-- <label for="contact_name" class="contact__form--first-label"
+              >Name</label
+            > -->
+          </div>
+          <div class="contact__form--field">
+            <input
+              type="email"
+              required
+              id="contact_email"
+              placeholder="Email"
+            />
+            <!-- <label for="contact_email" class="contact__form--first-label"
+              >Email</label
+            > -->
+          </div>
+          <div class="contact__form--field">
+            <textarea id="contact__message" placeholder="Message"></textarea>
+            <!-- <label for="contact_message" class="contact__form--last-label"
+              >Message</label
+            > -->
+          </div>
+          <button class="cta"
+            >Send<Icon
+              class="icon contact__form--icon"
+              name="carbon:send"
+            /></button
+          >
+        </form>
+      </div>
+      <div class="contact__right">
+        <a href="tel:+212624360624" class="contact__info link">
+          <Icon class="icon contact__icon" name="ph:phone-light" />
+           +212 123456789</a
+        >
+        <p class="paragraph contact__info">
+          <Icon class="icon contact__icon" name="carbon:location" />Drarga
+          street 1, Agadir Morocco
+        </p>
+        <div class="contact__socials">
+          <a target="_blank" href="https://facebook.com/"
+            ><Icon
+              class="icon contact__social"
+              name="ic:baseline-facebook"
+            /></a
+          >
+          <a target="_blank" href="https://www.instagram.com/"
+            ><Icon class="icon contact__social" name="mdi:instagram" /></a
+          >
+          <a target="_blank" href="https://www.youtube.com/"
+            ><Icon class="icon contact__social" name="mdi:youtube" /></a
+          >
+          <a target="_blank" href="https://www.linkedin.com/in/youness-ailal/"
+            ><Icon class="icon contact__social" name="mdi:linkedin" /></a
+          >
+        </div>
+        <div class="contact__map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+  import customMarkerIcon from "../../public/icons/marker.svg";
+
+  const map = L.map("map", { attributionControl: false }).setView(
+    [30.391799720263787, -9.478511961375869],
+    14
+  );
+
+  // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  //   attribution:
+  //     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  // }).addTo(map);
+  L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+    maxZoom: 20,
+    subdomains: ["mt0", "mt1", "mt2", "mt3"],
+  }).addTo(map);
+
+  const customIcon = L.divIcon({
+    className: "custom-marker",
+    html: `<div class="custom-marker" ></div>`,
+    iconAnchor: [20, 20],
+  });
+  const marker = L.marker([30.391799720263787, -9.478511961375869], {
+    icon: customIcon,
+  }).addTo(map);
+  const popupContent = '<div class="custom-popup">Lion Park</div>';
+
+  marker.bindPopup(popupContent);
+</script>

@@ -15,6 +15,8 @@
       flex-direction: column;
     }
     &--left {
+      box-shadow: 0 0 3rem 0.3rem rgb(6, 55, 24, 0.1);
+
       // min-width: 50rem;
       border-radius: 2rem;
       background-color: var(--text-color);
@@ -28,6 +30,8 @@
       }
     }
     &--right {
+      box-shadow: 0 0 3rem 0.3rem rgb(6, 55, 24, 0.1);
+
       // min-width: 50rem;
       height: 45rem;
       border-radius: 2rem;
@@ -89,6 +93,8 @@
     gap: 5rem;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 0 3rem 0.3rem rgb(6, 55, 24, 0.1);
+
     img {
       height: 100%;
       width: 100%;
@@ -96,7 +102,7 @@
     }
     &--short {
       // min-width: 45rem;
-      background-color: var(--disabled-text);
+      background-color: var(--super-light-green);
     }
     &--image {
       padding: 0;

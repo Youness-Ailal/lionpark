@@ -25,19 +25,17 @@
     color: var(--bg-color);
   }
   li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    &:hover a,
+    &:hover .dropdown__icon {
+      color: var(--light-green);
+    }
     a {
       font-size: 4rem;
       padding: 0.5rem;
       color: var(--bg-color);
-      &:hover {
-        color: var(--light-green);
-      }
-      &:hover ~ .dropdown__icon {
-        color: var(--normal-green);
-      }
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
 

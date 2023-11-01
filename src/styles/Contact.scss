@@ -1,0 +1,120 @@
+.contact {
+  &__container {
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10rem;
+    @media (max-width: 1000px) {
+      gap: 5rem;
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title {
+    margin-bottom: 6rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    input,
+    textarea {
+      width: 100%;
+      padding: 1.5rem;
+      padding-left: 2rem;
+      font-size: 2rem;
+      border: 1px solid var(--grey);
+      background-color: var(--super-light-green-2);
+      outline: 2px solid transparent;
+      outline-offset: 0.5rem;
+      border-radius: 0.5rem;
+      transition: 0.2s;
+      font-family: inherit;
+      transition: all 0.3s, border 0.15s;
+      font-weight: 500;
+      &::placeholder {
+        font-weight: 400;
+      }
+      &:focus {
+        border-color: transparent;
+        outline-offset: 0;
+        outline-color: var(--normal-green-hover);
+        background-color: var(--super-light-green);
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 25rem;
+    }
+    &--icon {
+      height: 3rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      align-self: end;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__info {
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: start;
+  }
+  &__icon {
+    height: 3rem;
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+  &__social {
+    height: 4.5rem;
+    padding: 0.8rem;
+    border-radius: 10rem;
+    background-color: var(--text-color);
+    color: var(--white);
+    &:hover {
+      background-color: var(--dark-green);
+    }
+  }
+  &__map {
+    min-height: 30rem;
+    max-width: 50rem;
+  }
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.custom-popup {
+  font-size: 1.6rem;
+  font-family: interphase, sans-serif;
+  font-weight: 400;
+  max-width: 30rem;
+}
+
+.custom-marker {
+  height: 5rem;
+  width: 5rem;
+  background-image: url("../../public/icons/marker.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

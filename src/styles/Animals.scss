@@ -16,7 +16,9 @@
     &:hover img {
       scale: 1.05;
     }
-
+    &:hover .animals__details {
+      height: 23%;
+    }
     &::after {
       content: "";
       height: 120%;
@@ -56,6 +58,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    transition: 0.2s;
     &:active {
       scale: 1;
     }

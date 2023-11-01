@@ -6,6 +6,12 @@ import lion3 from "/images/lion3.jpg?url";
 import lion4 from "/images/lion4.jpg?url";
 import lion5 from "/images/lion5.jpg?url";
 import lion6 from "/images/lion6.jpg?url";
+import gallery1 from "/images/gallery1.jpg?url";
+import gallery2 from "/images/gallery7.jpg?url";
+import gallery3 from "/images/gallery3.jpg?url";
+import gallery4 from "/images/gallery4.jpg?url";
+import gallery5 from "/images/gallery5.jpg?url";
+import gallery6 from "/images/gallery6.jpg?url";
 import Icon from "astro-icon";
 ---
 
@@ -32,8 +38,13 @@ import Icon from "astro-icon";
     </div>
     <div class="feeding__right">
       <div class="feeding__right--top">
-        <button class="select-btn-bg feeding__select selected">Today</button>
-        <button class="select-btn-bg feeding__select">Tomorrow</button>
+        <button
+          class="select-btn-bg feeding__select feeding__select-today selected"
+          >Today</button
+        >
+        <button class="select-btn-bg feeding__select feeding__select-tomorrow"
+          >Tomorrow</button
+        >
         <a href="#sub" class="feeding__sub"
           >Subscribe for events news<Icon
             class="icon feeding__icon"
@@ -76,3 +87,95 @@ import Icon from "astro-icon";
     </div>
   </div>
 </section>
+<script>
+  import lion1 from "/images/lion1.jpg?url";
+  import lion2 from "/images/lion7.jpg?url";
+  import lion3 from "/images/lion3.jpg?url";
+  import lion4 from "/images/lion4.jpg?url";
+  import lion5 from "/images/lion5.jpg?url";
+  import lion6 from "/images/lion6.jpg?url";
+  import gallery1 from "/images/gallery1.jpg?url";
+  import gallery2 from "/images/gallery7.jpg?url";
+  import gallery3 from "/images/gallery3.jpg?url";
+  import gallery4 from "/images/gallery4.jpg?url";
+  import gallery5 from "/images/gallery5.jpg?url";
+  import gallery6 from "/images/gallery6.jpg?url";
+  const feedingContainer = document.querySelector(".feeding__right--bottom");
+  const selectToday = document.querySelector(".feeding__select-today");
+  const selectTomorrow = document.querySelector(".feeding__select-tomorrow");
+  const markup1 = ` <div class="feeding__card">
+          <img src=${lion1} alt="big lion " />
+          <p class="feeding__time">10:00</p>
+          <p class="feeding__name">Barbary lion</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${lion2} alt="big lion " />
+          <p class="feeding__time">12:00</p>
+          <p class="feeding__name">Cougar</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${lion3} alt="big lion " />
+          <p class="feeding__time">12:30</p>
+          <p class="feeding__name">A cub</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${lion4} alt="big lion " />
+          <p class="feeding__time">14:00</p>
+          <p class="feeding__name">Bengal tiger</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${lion5} alt="big lion " />
+          <p class="feeding__time">14:30</p>
+          <p class="feeding__name">White lion</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${lion6} alt="big lion " />
+          <p class="feeding__time">16:00</p>
+          <p class="feeding__name">Black tiger</p>
+        </div>`;
+  const markup2 = ` <div class="feeding__card">
+          <img src=${gallery1} alt="big lion " />
+          <p class="feeding__time">10:00</p>
+          <p class="feeding__name">Lioness</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${gallery2} alt="big lion " />
+          <p class="feeding__time">12:00</p>
+          <p class="feeding__name">Cougar</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${gallery3} alt="big lion " />
+          <p class="feeding__time">12:30</p>
+          <p class="feeding__name">A cub</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${gallery4} alt="big lion " />
+          <p class="feeding__time">14:00</p>
+          <p class="feeding__name">Bengal tiger</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${gallery5} alt="big lion " />
+          <p class="feeding__time">14:30</p>
+          <p class="feeding__name">Cheetah</p>
+        </div>
+        <div class="feeding__card">
+          <img src=${gallery6} alt="big lion " />
+          <p class="feeding__time">16:00</p>
+          <p class="feeding__name">Black tiger</p>
+        </div>`;
+
+  selectToday.addEventListener("click", () => {
+    if (!selectToday.classList.contains("selected")) {
+      selectToday.classList.add("selected");
+      selectTomorrow.classList.remove("selected");
+      feedingContainer.innerHTML = markup1;
+    }
+  });
+  selectTomorrow.addEventListener("click", () => {
+    if (!selectTomorrow.classList.contains("selected")) {
+      selectToday.classList.remove("selected");
+      selectTomorrow.classList.add("selected");
+      feedingContainer.innerHTML = markup2;
+    }
+  });
+</script>
