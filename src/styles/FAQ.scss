@@ -18,6 +18,9 @@
     justify-content: center;
     gap: 4rem;
     row-gap: 2rem;
+    @media (max-width: 800px) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -32,6 +35,9 @@
   overflow: hidden;
   @media (max-width: 600px) {
     padding: 0 0.5rem;
+  }
+  @media (max-width: 500px) {
+    max-width: 90dvw;
   }
   &__top {
     cursor: pointer;
