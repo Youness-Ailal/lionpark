@@ -7,18 +7,18 @@ const map = L.map("map", { attributionControl: false }).setView(
   14
 );
 
-// L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//   attribution:
-//     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-// }).addTo(map);
-L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-  maxZoom: 20,
-  subdomains: ["mt0", "mt1", "mt2", "mt3"],
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+// L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+//   maxZoom: 20,
+//   subdomains: ["mt0", "mt1", "mt2", "mt3"],
+// }).addTo(map);
 
 const customIcon = L.divIcon({
   className: "custom-marker",
-  html: `<div class="custom-marker" ></div>`,
+  html: `<div class="custom-marker" >.</div>`,
   iconAnchor: [30, 30],
 });
 const marker = L.marker([30.391799720263787, -9.478511961375869], {
