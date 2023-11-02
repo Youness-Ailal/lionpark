@@ -5,12 +5,18 @@ import "pikaday/css/pikaday.css";
 const today = new Date();
 const tomorrow = new Date();
 tomorrow.setDate(today.getDate() + 1);
+const hideLoader = function () {
+  document.querySelector(".lazy-loader").classList.add("hidden-loader");
+};
 const picker = new Pikaday({
   field: document.getElementById("datepicker"),
   bound: false,
   defaultDate: tomorrow,
   setDefaultDate: true,
   minDate: today,
+  onOpen: () => {
+    hideLoader();
+  },
 });
 //Handles Inputs min values
 const kidsInputs = document.querySelectorAll("#kid-input");

@@ -80,6 +80,13 @@
       }
     }
   }
+  &__picker-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+  }
 }
 .ticket {
   display: flex;
