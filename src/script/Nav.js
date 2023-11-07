@@ -69,7 +69,7 @@ const showNav = function (e) {
     );
   setTimeout(() => {
     navButton.disabled = false;
-  }, 900);
+  }, 1500);
 };
 const hideNav = function (e) {
   navButton.disabled = true;
@@ -120,7 +120,7 @@ const hideNav = function (e) {
 
   setTimeout(() => {
     navButton.disabled = false;
-  }, 800);
+  }, 1500);
   setTimeout(() => {
     dropBg.classList.add("hidden-bg");
     dropNav.style.display = "none";
