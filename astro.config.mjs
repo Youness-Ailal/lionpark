@@ -9,4 +9,5 @@ export default defineConfig({
   adapter: netlify(),
   site: "https://lionpark.netlify.app",
   integrations: [sitemap()],
+  prefetch: true,
 });
