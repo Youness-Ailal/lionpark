@@ -1,35 +1,41 @@
 @font-face {
   font-family: "interphase";
-  src: url("/fonts/TT-Interphases-Pro-Trial-Light.ttf");
+  // src: url("/fonts/TT-Interphases-Pro-Trial-Light.ttf");
+  src: url("/fonts/lemon-light.otf");
   font-weight: 300;
   font-size: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "interphase";
-  src: url("/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
-  font-weight: 400;
+// @font-face {
+//   font-family: "interphase";
+//   src: url("/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
+//   // src: url("/fonts/lemon-light.otf");
+//   font-weight: 400;
 
-  font-size: normal;
-  font-display: swap;
-}
+//   font-size: normal;
+//   font-display: swap;
+// }
 @font-face {
   font-family: "interphase";
-  src: url("/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
+  // src: url("/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
+  src: url("/fonts/lemon-regular.otf");
   font-weight: 500;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "interphase";
-  src: url("/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
+  // src: url("/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
+  src: url("/fonts/lemon-mid.otf");
+
   font-weight: 600;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "interphase";
-  src: url("/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
+  // src: url("/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
+  src: url("/fonts/lemon-mid.otf");
   font-weight: 700;
   font-size: normal;
   font-display: swap;
@@ -80,8 +86,10 @@ button {
   }
 }
 a,
-button {
+button,
+svg {
   transition: 0.2s;
+  transform-origin: center;
   cursor: pointer;
   &:active {
     scale: 0.95;
@@ -92,13 +100,16 @@ img {
 }
 body {
   background-color: var(--bg-color);
-  line-height: 1.4;
+  line-height: 1.5;
   font-family: interphase, sans-serif;
   font-weight: 500;
   color: var(--text-color);
   overflow-y: var(--body-overflow);
   overflow-x: hidden !important;
   max-width: 100dvw;
+}
+p {
+  font-family: sans-serif;
 }
 
 .main-title {

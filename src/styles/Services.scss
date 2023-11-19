@@ -5,15 +5,15 @@
   }
   &__container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 10rem;
+    grid-template-columns: 2fr 2.4fr;
+    gap: 5rem;
     @media (max-width: 700px) {
       grid-template-columns: 1fr;
       gap: 4rem;
     }
   }
   &__left {
-    padding-right: 10rem;
+    padding-right: 6rem;
     border-right: 2px dashed var(--super-dark-green);
     @media (max-width: 700px) {
       border-right: none;
@@ -42,8 +42,8 @@
   gap: 0.5rem;
 
   &__icon {
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    aspect-ratio: 1;
     object-fit: cover;
     @media (max-width: 600px) {
       height: 7rem;
