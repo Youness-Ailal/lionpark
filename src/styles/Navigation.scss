@@ -23,6 +23,8 @@
     gap: 0.4rem;
     font-size: 1.5rem;
     display: flex;
+    font-family: sans-serif;
+    // font-weight: 300;
     align-items: center;
     color: var(--grey);
     @media (max-width: 700px) {
@@ -40,7 +42,7 @@
     border-radius: 0.4rem;
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     transition: 0.2s;
     position: relative;
