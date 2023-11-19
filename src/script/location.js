@@ -1,29 +1,42 @@
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import customMarkerIcon from "../../public/icons/marker.svg";
+// import L from "leaflet";
+// import "leaflet/dist/leaflet.css";
+// import customMarkerIcon from "../../public/icons/marker.svg";
 
-const map = L.map("map", { attributionControl: false }).setView(
-  [30.391799720263787, -9.478511961375869],
-  14
-);
+const observer = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      try {
+        import("leaflet/dist/leaflet.css");
+        import("leaflet").then(L => {
+          const map = L.map("map", { attributionControl: false }).setView(
+            [30.391799720263787, -9.478511961375869],
+            14
+          );
 
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
-// L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-//   maxZoom: 20,
-//   subdomains: ["mt0", "mt1", "mt2", "mt3"],
-// }).addTo(map);
+          L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution:
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          }).addTo(map);
 
-const customIcon = L.divIcon({
-  className: "custom-marker",
-  html: `<div class="custom-marker" >.</div>`,
-  iconAnchor: [30, 30],
+          const customIcon = L.divIcon({
+            className: "custom-marker",
+            html: `<div class="custom-marker" >.</div>`,
+            iconAnchor: [30, 30],
+          });
+          const marker = L.marker([30.391799720263787, -9.478511961375869], {
+            icon: customIcon,
+          }).addTo(map);
+          const popupContent = '<div class="custom-popup">Lion Park</div>';
+
+          marker.bindPopup(popupContent);
+        });
+      } catch (err) {
+        console.log(
+          "error while Loading leaflet Map , please refresh the page - Youness"
+        );
+      }
+    }
+  }
 });
-const marker = L.marker([30.391799720263787, -9.478511961375869], {
-  icon: customIcon,
-}).addTo(map);
-const popupContent = '<div class="custom-popup">Lion Park</div>';
 
-marker.bindPopup(popupContent);
+observer.observe(document.getElementById("map"));
