@@ -1,5 +1,12 @@
 import Swiper from "swiper";
+import imagesloads from "imagesloaded";
 
+//Handles hero images loaded
+let swiperLoop;
+const heroImagesLoad = imagesloads(".hero");
+heroImagesLoad.on("done", () => {
+  swiperLoop = "true";
+});
 //Handles image slider
 const slider = document.querySelector(".hero__bottom--images");
 const heroImages = document.querySelectorAll(".hero__image-img");
@@ -7,7 +14,7 @@ const nextSlideBtn = document.querySelector(".hero__buttom--next");
 const prevSlideBtn = document.querySelector(".hero__buttom--prev");
 const swiper = new Swiper(".hero__bottom", {
   slidesPerView: "auto",
-  loop: "true",
+  loop: swiperLoop,
   spaceBetween: 10,
 
   breakpoints: {
