@@ -70,6 +70,9 @@ html {
 
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  @media (max-width: 425px) {
+    font-size: 7px;
+  }
 }
 a {
   text-decoration: none;

@@ -6,7 +6,7 @@
     max-width: 160rem;
     padding: 0 5rem;
     @media (max-width: 650px) {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       padding: 0 2rem;
     }
   }
@@ -18,25 +18,20 @@
     }
   }
 
-  // &__content {
-  //   display: flex;
-  //   flex-direction: column;
-  //   gap: 2rem;
-  // }
   &__title {
     @media (max-width: 650px) {
       align-self: start;
     }
-    span {
-      position: relative;
-    }
-    &--icon {
-      height: 2.5rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-    }
+    // span {
+    //   position: relative;
+    // }
+    // &--icon {
+    //   height: 2.5rem;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   translate: -50% -50%;
+    // }
   }
   &__buttons {
     display: flex;
@@ -55,10 +50,11 @@
     margin-bottom: 2rem;
     max-width: 160rem;
     padding: 0 5rem;
-    @media (max-width: 650px) {
+    @media (max-width: 755px) {
       flex-direction: column;
       gap: 0rem;
       padding: 0 2rem;
+      margin-top: 4rem;
     }
   }
   &__bottom {
