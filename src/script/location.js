@@ -8,10 +8,10 @@ const observer = new IntersectionObserver(entries => {
       try {
         import("leaflet/dist/leaflet.css");
         import("leaflet").then(L => {
-          const map = L.map("map", { attributionControl: false }).setView(
-            [30.391799720263787, -9.478511961375869],
-            14
-          );
+          const map = L.map("map", {
+            scrollWheelZoom: false,
+            attributionControl: false,
+          }).setView([30.391799720263787, -9.478511961375869], 14);
 
           L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution:
