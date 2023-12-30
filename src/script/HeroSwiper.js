@@ -11,22 +11,22 @@ const prevSlideBtn = document.querySelector(".hero__buttom--prev");
 const swiper = new Swiper(".hero__bottom", {
   slidesPerView: "auto",
   loop: "true",
-  spaceBetween: 10,
+  // spaceBetween: 10,
 
-  breakpoints: {
-    400: {
-      spaceBetween: 15,
-    },
-    800: {
-      spaceBetween: 20,
-    },
-    1000: {
-      spaceBetween: 25,
-    },
-    1200: {
-      spaceBetween: 30,
-    },
-  },
+  // breakpoints: {
+  //   400: {
+  //     spaceBetween: 15,
+  //   },
+  //   800: {
+  //     spaceBetween: 20,
+  //   },
+  //   1000: {
+  //     spaceBetween: 25,
+  //   },
+  //   1200: {
+  //     spaceBetween: 10,
+  //   },
+  // },
 });
 nextSlideBtn.addEventListener("click", () => {
   swiper.slideNext();

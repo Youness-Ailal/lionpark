@@ -1,6 +1,7 @@
 ---
 import Main from "../Layouts/MainLayout.astro";
-import Feeding from "../components/Feeding.astro";
+// import Feeding from "../components/Feeding.astro";
+import Feeding from "../components/Feeding.jsx";
 import Hero from "../components/Hero.astro";
 import Services from "../components/Services.astro";
 import Map from "../components/Map.astro";
@@ -13,7 +14,7 @@ import Subscribe from "../components/Subscribe.astro";
 <Main title="Home" isView="true">
   <Hero />
   <Services />
-  <Feeding />
+  <Feeding client:load />
   <Map />
   <Rare />
   <FAQ />

@@ -9,7 +9,7 @@ import Icon from "astro-icon";
       <div class="location__right">
         <h2 class="heading-second location__title">Where Are We?</h2>
 
-        <p class="paragraph location__instructions">
+        <p class="paragraph">
           Once you're on the Marrakesh-Agadir Highway in Drarga, follow the
           signs to Lion Park, just 2 minutes from Crocopark. At the park's
           entrance checkpoint, mention that you're visiting Lion Park.
@@ -29,7 +29,15 @@ import Icon from "astro-icon";
         >
       </div>
       <div class="location__left">
-        <figure id="map"></figure>
+        <iframe
+          class="location__map"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCoJheqNQWswwrqghG_wgXyeaRFY6qv3pg
+    &q=Lion+Park,9GRC+FM, Drarga &zoom=15">
+        </iframe>
+        <!-- <figure id="map"></figure> -->
       </div>
     </div>
   </div>

@@ -10,28 +10,11 @@
       padding: 0 2rem;
     }
   }
-  &__select {
-    font-size: 1.4rem;
-    &:hover {
-      background-color: var(--normal-green);
-      color: #fff;
-    }
-  }
 
   &__title {
     @media (max-width: 650px) {
       align-self: start;
     }
-    // span {
-    //   position: relative;
-    // }
-    // &--icon {
-    //   height: 2.5rem;
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   translate: -50% -50%;
-    // }
   }
   &__buttons {
     display: flex;
@@ -59,12 +42,13 @@
   }
   &__bottom {
     z-index: -1;
-    min-width: 100dvw;
+    // min-width: 100dvw;
     padding-left: 2rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    translate: 0 -8rem;
     &--images {
       display: flex;
       gap: 1.5rem;
@@ -99,50 +83,17 @@
     }
   }
   &__image {
-    border-radius: 2rem;
+    border-radius: var(--radius-lg);
     width: 35rem;
     height: 55rem;
     flex: 0 0 35rem;
-    // user-select: none;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--normal-green);
 
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      // pointer-events: none;
     }
-    // &--1 {
-    //   background-image: url("../../public/images/lion1.jpg");
-    // }
-    // &--2 {
-    //   background-image: url("../../public/images/lion2.jpg");
-    // }
-    // &--3 {
-    //   background-image: url("../../public/images/lion5.jpg");
-    // }
-    // &--4 {
-    //   background-image: url("../../public/images/lion4.jpg");
-    // }
-    // &--5 {
-    //   background-image: url("../../public/images/lion3.jpg");
-    // }
-    // &--6 {
-    //   background-image: url("../../public/images/lion6.jpg");
-    // }
-    // &--7 {
-    //   background-image: url("../../public/images/lion7.jpg");
-    // }
-    // &--8 {
-    //   background-image: url("../../public/images/lion8.jpg");
-    // }
-    // &--9 {
-    //   background-image: url("../../public/images/lion9.jpg");
-    // }
-    // &--10 {
-    //   background-image: url("../../public/images/lion10.jpg");
-    // }
   }
 }

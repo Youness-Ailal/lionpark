@@ -1,6 +1,7 @@
 ---
 import Icon from "astro-icon";
 import "../styles/Hero.scss";
+import SelectButton from "../ui/SelectButton.astro";
 import lion1 from "/images/lion1.jpg?url";
 import lion2 from "/images/lion2.jpg?url";
 import lion3 from "/images/lion3.jpg?url";
@@ -13,164 +14,28 @@ import lion9 from "/images/lion9.jpg?url";
 import lion10 from "/images/lion10.jpg?url";
 
 import lowimage from "/images/lowqt.svg?url";
+import HeroSwiper from "./homepage/HeroSwiper.astro";
 ---
 
 <section class="hero">
   <div class="hero__top">
     <div class="hero__buttons">
-      <a href="#location" class="hero__select select-btn"
-        ><Icon class="icon" name="carbon:location" />Get Location</a
-      >
-      <a href="#map-cart" class="hero__select select-btn"
-        ><Icon class="icon" name="iconoir:map" />Zoo Map</a
-      >
-      <a href="/Animals" class="hero__select select-btn"
-        ><Icon class="icon" name="mdi:paw" />Our Animals</a
-      >
+      <SelectButton href="#location" iconName="carbon:location">
+        Get Location
+      </SelectButton>
+      <SelectButton href="#map-cart" iconName="iconoir:map">
+        Zoo Map
+      </SelectButton>
+      <SelectButton href="/Animals" iconName="mdi:paw">
+        Our Animals
+      </SelectButton>
     </div>
   </div>
   <div class="hero__content">
     <div class="hero__mid">
-      <h1 class="hero__title heading">
-        <!-- <span>O<Icon class="icon hero__title--icon" name="mdi:paw" /></span> -->
-
-         LION PARK AGADIR
-      </h1>
-      <a href="/Tickets" class="hero__button big-button"
-        >Purchase<br />Tickets</a
-      >
+      <h1 class="hero__title heading">LION PARK AGADIR</h1>
+      <a href="/Tickets" class="hero__button big-button">book<br />Tickets</a>
     </div>
-    <div class="hero__bottom swiper">
-      <div
-        class="hero__bottom--images swiper-wrapper"
-        data-mouse-at="0"
-        data-prev-percent="0">
-        <div class="hero__image hero__image--1 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion1}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--2 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion2}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--3 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion3}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--4 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion4}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--5 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion5}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--6 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion6}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--7 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion7}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--8 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion8}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--9 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion9}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-        <div class="hero__image hero__image--10 swiper-slide">
-          <div class="lazy-loader">
-            <div class="lazy-spinner"></div>
-          </div>
-          <img
-            class="hero__image-img lazy"
-            data-src={lion10}
-            src={lowimage}
-            alt="lion picture from our lion zoo"
-          />
-        </div>
-      </div>
-      <div class="hero__bottom--buttons">
-        <button class="hero__buttom--prev">
-          <Icon
-            class="icon hero__bottom--icon hero__bottom--icon-1"
-            name="bi:arrow-up"
-          />
-        </button>
-        <button class="hero__buttom--next">
-          <Icon
-            class="icon hero__bottom--icon hero__bottom--icon-2"
-            name="bi:arrow-up"
-          />
-        </button>
-      </div>
-    </div>
+    <HeroSwiper />
   </div>
 </section>
-<script src="../script/hero.js"></script>

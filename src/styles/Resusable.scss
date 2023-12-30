@@ -25,6 +25,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-size: 1.4rem;
   gap: 0.5rem;
   padding: 0.5rem 1.4rem;
   color: var(--normal-green);
@@ -41,11 +42,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 4rem;
-  font-size: 1.8rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  min-width: 15rem;
   color: var(--normal-green);
   background-color: transparent;
-  border: 2px solid var(--normal-green);
+  border: 1px solid var(--normal-green);
   border-radius: 20rem;
   display: flex;
   place-content: center;
@@ -107,9 +109,10 @@
   }
 }
 .paragraph {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--text-color);
-  font-weight: 400;
+  font-weight: 500;
+
   line-height: 1.8;
 }
 input {
@@ -117,7 +120,7 @@ input {
   font-weight: 500;
   color: var(--dark-green);
   &::placeholder {
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 .cta {
@@ -146,12 +149,12 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25rem;
+  height: 28rem;
   border: 0.5rem solid var(--bg-color);
   color: #fff;
   text-align: center;
   font-size: 2.4rem;
-  line-height: 2;
+  line-height: 1.8;
   letter-spacing: 1px;
   border-radius: 20rem;
   aspect-ratio: 1;
@@ -161,7 +164,7 @@ input {
   z-index: 999;
   margin-left: auto;
   user-select: none;
-  translate: 0 6rem;
+  // translate: 0 6rem;
 
   &:hover {
     background-color: var(--orange-hover);

@@ -2,10 +2,9 @@
 import logo from "/images/logo-footer.svg?url";
 import Icon from "astro-icon";
 import "../styles/Footer.scss";
-import lion1 from "/images/lion1.jpg?url";
-import lion2 from "/images/lion7.jpg?url";
-import lion3 from "/images/lion3.jpg?url";
-import lion4 from "/images/lion4.jpg?url";
+
+const IMAGE_BASE_URL =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_450/lionpark-swipers";
 const year = new Date().getFullYear();
 ---
 
@@ -57,10 +56,22 @@ const year = new Date().getFullYear();
     <div class="footer__photos">
       <p class="footer__title">latest photos</p>
       <div class="footer__gallery">
-        <img src={lion1} alt="a lion from lion park Agadir" />
-        <img src={lion2} alt="a lion from lion park Agadir" />
-        <img src={lion3} alt="a lion from lion park Agadir" />
-        <img src={lion4} alt="a lion from lion park Agadir" />
+        <img
+          src={`${IMAGE_BASE_URL}/swiper_2.jpg`}
+          alt="a lion from lion park Agadir"
+        />
+        <img
+          src={`${IMAGE_BASE_URL}/swiper_6.jpg`}
+          alt="a lion from lion park Agadir"
+        />
+        <img
+          src={`${IMAGE_BASE_URL}/swiper_4.jpg`}
+          alt="a lion from lion park Agadir"
+        />
+        <img
+          src={`${IMAGE_BASE_URL}/swiper_5.jpg`}
+          alt="a lion from lion park Agadir"
+        />
       </div>
     </div>
   </div>

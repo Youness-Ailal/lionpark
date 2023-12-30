@@ -1,0 +1,8 @@
+---
+import Icon from "astro-icon";
+const { href, iconName } = Astro.props;
+---
+
+<a href={href} class="hero__select select-btn"
+  ><Icon class="icon" name={iconName} /><slot /></a
+>

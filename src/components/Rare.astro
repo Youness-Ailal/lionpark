@@ -1,7 +1,8 @@
 ---
 import "../styles/Rare.scss";
-import lion10 from "/images/lionvideo.jpg?url";
 import { Vimeo } from "@astro-community/astro-embed-vimeo";
+const IMAGE_BASE_URL =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_600/lionpark-swipers";
 ---
 
 <section class="rare">
@@ -14,7 +15,7 @@ import { Vimeo } from "@astro-community/astro-embed-vimeo";
     <div class="rare__bottom">
       <div class="rare__left">
         <div class="rare__video--container">
-          <Vimeo id="475645175" poster={lion10} />
+          <Vimeo id="475645175" poster={`${IMAGE_BASE_URL}/lion_video.jpg`} />
         </div>
       </div>
       <div class="rare__right">

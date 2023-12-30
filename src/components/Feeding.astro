@@ -1,18 +1,65 @@
 ---
 import "../styles/Feeding.scss";
-import lion1 from "/images/lion1.jpg?url";
-import lion2 from "/images/lion7.jpg?url";
-import lion3 from "/images/lion3.jpg?url";
-import lion4 from "/images/lion4.jpg?url";
-import lion5 from "/images/lion5.jpg?url";
-import lion6 from "/images/lion6.jpg?url";
-import gallery1 from "/images/gallery1.jpg?url";
-import gallery2 from "/images/gallery7.jpg?url";
-import gallery3 from "/images/gallery3.jpg?url";
-import gallery4 from "/images/gallery4.jpg?url";
-import gallery5 from "/images/gallery5.jpg?url";
-import gallery6 from "/images/gallery6.jpg?url";
 import Icon from "astro-icon";
+
+const IMAGE_BASE_URL =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_450/lionpark-swipers";
+const IMAGE_BASE_URL_LOW =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_20/lionpark-swipers";
+
+const feedingToday = [
+  {
+    time: "10:00",
+    name: "Lioness",
+  },
+  {
+    time: "12:00",
+    name: "Cheetah",
+  },
+  {
+    time: "12:30",
+    name: "Serval",
+  },
+
+  {
+    time: "14:00",
+    name: "White lion",
+  },
+  {
+    time: "14:30",
+    name: "Black tiger",
+  },
+  {
+    time: "16:00",
+    name: "Bengal tiger",
+  },
+];
+const feedingTomorrow = [
+  {
+    time: "9:30",
+    name: "African Lion",
+  },
+  {
+    time: "11:00",
+    name: "Jaguar",
+  },
+  {
+    time: "12:00",
+    name: "Lion Cub",
+  },
+  {
+    time: "13:30",
+    name: "Siberian Tiger",
+  },
+  {
+    time: "14:30",
+    name: "Leopard",
+  },
+  {
+    time: "16:00",
+    name: "Black Panther",
+  },
+];
 ---
 
 <section class="feeding">
@@ -46,64 +93,45 @@ import Icon from "astro-icon";
           >Tomorrow</button
         >
         <a href="#sub" class="feeding__sub"
-          >Subscribe for events news<Icon
+          >Subscribe<Icon
             class="icon feeding__icon"
-            name="ep:arrow-right"
+            name="lucide:bell-ring"
           /></a
         >
       </div>
       <div class="feeding__right--bottom">
-        <div class="feeding__card">
-          <img src={lion1} alt="big lion " />
-          <p class="feeding__time">10:00</p>
-          <p class="feeding__name">Barbary lion</p>
-        </div>
-        <div class="feeding__card">
-          <img src={lion2} alt="big lion " />
-          <p class="feeding__time">12:00</p>
-          <p class="feeding__name">Cougar</p>
-        </div>
-        <div class="feeding__card">
-          <img src={lion3} alt="big lion " />
-          <p class="feeding__time">12:30</p>
-          <p class="feeding__name">A cub</p>
-        </div>
-        <div class="feeding__card">
-          <img src={lion4} alt="big lion " />
-          <p class="feeding__time">14:00</p>
-          <p class="feeding__name">Bengal tiger</p>
-        </div>
-        <div class="feeding__card">
-          <img src={lion5} alt="big lion " />
-          <p class="feeding__time">14:30</p>
-          <p class="feeding__name">White lion</p>
-        </div>
-        <div class="feeding__card">
-          <img src={lion6} alt="big lion " />
-          <p class="feeding__time">16:00</p>
-          <p class="feeding__name">Black tiger</p>
-        </div>
+        {
+          feedingToday.map((item, index) => (
+            <div class="feeding__card">
+              <img
+                src={`${IMAGE_BASE_URL}/swiper_${index + 2}.jpg`}
+                alt={item.name}
+              />
+              <p class="feeding__time">{item.time}</p>
+              <p class="feeding__name">{item.name}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
-</section>
-<script>
-  import lion1 from "/images/lion1.jpg?url";
-  import lion2 from "/images/lion7.jpg?url";
-  import lion3 from "/images/lion3.jpg?url";
-  import lion4 from "/images/lion4.jpg?url";
-  import lion5 from "/images/lion5.jpg?url";
-  import lion6 from "/images/lion6.jpg?url";
-  import gallery1 from "/images/gallery1.jpg?url";
-  import gallery2 from "/images/gallery7.jpg?url";
-  import gallery3 from "/images/gallery3.jpg?url";
-  import gallery4 from "/images/gallery4.jpg?url";
-  import gallery5 from "/images/gallery5.jpg?url";
-  import gallery6 from "/images/gallery6.jpg?url";
-  const feedingContainer = document.querySelector(".feeding__right--bottom");
-  const selectToday = document.querySelector(".feeding__select-today");
-  const selectTomorrow = document.querySelector(".feeding__select-tomorrow");
-  const markup1 = ` <div class="feeding__card">
+  <script>
+    import lion1 from "/images/lion1.jpg?url";
+    import lion2 from "/images/lion7.jpg?url";
+    import lion3 from "/images/lion3.jpg?url";
+    import lion4 from "/images/lion4.jpg?url";
+    import lion5 from "/images/lion5.jpg?url";
+    import lion6 from "/images/lion6.jpg?url";
+    import gallery1 from "/images/gallery1.jpg?url";
+    import gallery2 from "/images/gallery7.jpg?url";
+    import gallery3 from "/images/gallery3.jpg?url";
+    import gallery4 from "/images/gallery4.jpg?url";
+    import gallery5 from "/images/gallery5.jpg?url";
+    import gallery6 from "/images/gallery6.jpg?url";
+    const feedingContainer = document.querySelector(".feeding__right--bottom");
+    const selectToday = document.querySelector(".feeding__select-today");
+    const selectTomorrow = document.querySelector(".feeding__select-tomorrow");
+    const markup1 = ` <div class="feeding__card">
           <img src=${lion1} alt="big lion " />
           <p class="feeding__time">10:00</p>
           <p class="feeding__name">Barbary lion</p>
@@ -133,7 +161,7 @@ import Icon from "astro-icon";
           <p class="feeding__time">16:00</p>
           <p class="feeding__name">Black tiger</p>
         </div>`;
-  const markup2 = ` <div class="feeding__card">
+    const markup2 = ` <div class="feeding__card">
           <img src=${gallery1} alt="big lion " />
           <p class="feeding__time">9:30</p>
           <p class="feeding__name">Lioness</p>
@@ -164,18 +192,19 @@ import Icon from "astro-icon";
           <p class="feeding__name">Black tiger</p>
         </div>`;
 
-  selectToday.addEventListener("click", () => {
-    if (!selectToday.classList.contains("selected")) {
-      selectToday.classList.add("selected");
-      selectTomorrow.classList.remove("selected");
-      feedingContainer.innerHTML = markup1;
-    }
-  });
-  selectTomorrow.addEventListener("click", () => {
-    if (!selectTomorrow.classList.contains("selected")) {
-      selectToday.classList.remove("selected");
-      selectTomorrow.classList.add("selected");
-      feedingContainer.innerHTML = markup2;
-    }
-  });
-</script>
+    selectToday.addEventListener("click", () => {
+      if (!selectToday.classList.contains("selected")) {
+        selectToday.classList.add("selected");
+        selectTomorrow.classList.remove("selected");
+        feedingContainer.innerHTML = markup1;
+      }
+    });
+    selectTomorrow.addEventListener("click", () => {
+      if (!selectTomorrow.classList.contains("selected")) {
+        selectToday.classList.remove("selected");
+        selectTomorrow.classList.add("selected");
+        feedingContainer.innerHTML = markup2;
+      }
+    });
+  </script>
+</section>

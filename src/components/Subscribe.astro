@@ -1,6 +1,9 @@
 ---
 import "../styles/Subscribe.scss";
-import lion3 from "/images/lion3.jpg?url";
+const IMAGE_BASE_URL =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_500/lionpark-swipers";
+const IMAGE_BASE_URL_LOW =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_100/lionpark-swipers";
 ---
 
 <secion class="subscribe" id="sub">
@@ -28,7 +31,12 @@ import lion3 from "/images/lion3.jpg?url";
       </form>
     </div>
     <div class="subscribe__right">
-      <img src={lion3} alt="lionet from our lion zoo" />
+      <img
+        class="lazy"
+        data-src={`${IMAGE_BASE_URL}/swiper_8.jpg`}
+        src={`${IMAGE_BASE_URL_LOW}/swiper_8.jpg`}
+        alt="lionet from our lion zoo"
+      />
     </div>
   </div>
 </secion>

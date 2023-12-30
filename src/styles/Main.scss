@@ -1,45 +1,32 @@
 @font-face {
-  font-family: "interphase";
-  // src: url("/fonts/TT-Interphases-Pro-Trial-Light.ttf");
+  font-family: "lemon-regular";
   src: url("/fonts/lemon-light.otf");
   font-weight: 300;
   font-size: normal;
   font-display: swap;
 }
-// @font-face {
-//   font-family: "interphase";
-//   src: url("/fonts/TT-Interphases-Pro-Trial-Regular.ttf");
-//   // src: url("/fonts/lemon-light.otf");
-//   font-weight: 400;
-
-//   font-size: normal;
-//   font-display: swap;
-// }
 @font-face {
-  font-family: "interphase";
-  // src: url("/fonts/TT-Interphases-Pro-Trial-Medium.ttf");
+  font-family: "lemon-regular";
   src: url("/fonts/lemon-regular.otf");
+  font-weight: 400;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "lemon";
+  src: url("/fonts/lemon-mid.otf");
   font-weight: 500;
   font-size: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "interphase";
-  // src: url("/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf");
-  src: url("/fonts/lemon-mid.otf");
+  font-family: "lemon-bold";
+  src: url("/fonts/lemon-bold.otf");
+  font-weight: 600, 700;
+  font-size: normal;
+  font-display: swap;
+}
 
-  font-weight: 600;
-  font-size: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "interphase";
-  // src: url("/fonts/TT-Interphases-Pro-Trial-Bold.ttf");
-  src: url("/fonts/lemon-mid.otf");
-  font-weight: 700;
-  font-size: normal;
-  font-display: swap;
-}
 * {
   padding: 0;
   margin: 0;
@@ -50,11 +37,12 @@
   --bg-color: #fcfdf6;
   --super-dark-green: #0b2d17;
   --dark-green: #063718;
-  --text-color: #124a26;
-  --orange: #f97316;
-  --orange-hover: #d55f0b;
-  --normal-green: #87b139;
-  --normal-green-hover: #648828;
+  // --text-color: #124a26;
+  --text-color: #0b2d17;
+  --orange: #f2712c;
+  --orange-hover: #f4833a;
+  --normal-green: #6a922a;
+  --normal-green-hover: #536f25;
   --disabled-button: #3f5321;
   --disabled-text: #eaf3d4;
   --light-green: #e3f1bc;
@@ -64,6 +52,11 @@
   --light-grey: #dfe2e6;
   --grey: #6b7280;
   --body-overflow: auto;
+
+  --radius-lg: 3rem;
+  --radius-bg: 1rem;
+  --radius-md: 0.6rem;
+  --radius-sm: 0.2rem;
 }
 html {
   font-size: clamp(8px, 1vw, 10px);
@@ -78,6 +71,7 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+  font-weight: 500;
   position: relative;
 }
 
@@ -92,9 +86,10 @@ a,
 button {
   transition: 0.2s;
   transform-origin: center;
+  font-family: inherit;
   cursor: pointer;
   &:active {
-    scale: 0.95;
+    scale: 0.98;
   }
 }
 img {
@@ -103,15 +98,12 @@ img {
 body {
   background-color: var(--bg-color);
   line-height: 1.5;
-  font-family: interphase, sans-serif;
-  font-weight: 500;
+  font-family: "lemon-regular", "lemon", sans-serif;
+  font-weight: 400;
   color: var(--text-color);
   overflow-y: var(--body-overflow);
   overflow-x: hidden !important;
   max-width: 100dvw;
-}
-p {
-  font-family: sans-serif;
 }
 
 .main-title {
@@ -120,19 +112,18 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 1rem;
-  transition: 0.2s;
+  width: 0.8rem;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--normal-green);
   border-radius: 10rem;
-  transition: 0.3s;
   &:hover {
     background-color: var(--normal-green-hover);
   }
 }
 ::-webkit-scrollbar-track {
   background-color: var(--light-green);
+  border-radius: 20rem;
 }
 
 .lazy-loader {
@@ -176,4 +167,10 @@ p {
   div {
     display: none;
   }
+}
+h1,
+h2,
+h3,
+h4 {
+  // font-family: "lemon-regular", sans-serif;
 }

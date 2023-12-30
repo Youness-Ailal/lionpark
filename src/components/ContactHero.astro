@@ -11,9 +11,6 @@ import Icon from "astro-icon";
         <form class="contact__form">
           <div class="contact__form--field">
             <input type="text" required id="contact_name" placeholder="Name" />
-            <!-- <label for="contact_name" class="contact__form--first-label"
-              >Name</label
-            > -->
           </div>
           <div class="contact__form--field">
             <input
@@ -22,15 +19,9 @@ import Icon from "astro-icon";
               id="contact_email"
               placeholder="Email"
             />
-            <!-- <label for="contact_email" class="contact__form--first-label"
-              >Email</label
-            > -->
           </div>
           <div class="contact__form--field">
             <textarea id="contact__message" placeholder="Message"></textarea>
-            <!-- <label for="contact_message" class="contact__form--last-label"
-              >Message</label
-            > -->
           </div>
           <button class="cta"
             >Send<Icon
@@ -66,41 +57,15 @@ import Icon from "astro-icon";
             ><Icon class="icon contact__social" name="mdi:linkedin" /></a
           >
         </div>
-        <div class="contact__map">
-          <div id="map"></div>
-        </div>
+        <iframe
+          class="contact__map"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCoJheqNQWswwrqghG_wgXyeaRFY6qv3pg
+    &q=Lion+Park,9GRC+FM, Drarga &zoom=15">
+        </iframe>
       </div>
     </div>
   </div>
 </section>
-<script>
-  import L from "leaflet";
-  import "leaflet/dist/leaflet.css";
-  import customMarkerIcon from "../../public/icons/marker.svg";
-
-  const map = L.map("map", { attributionControl: false }).setView(
-    [30.391799720263787, -9.478511961375869],
-    14
-  );
-
-  // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  //   attribution:
-  //     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  // }).addTo(map);
-  L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-    maxZoom: 20,
-    subdomains: ["mt0", "mt1", "mt2", "mt3"],
-  }).addTo(map);
-
-  const customIcon = L.divIcon({
-    className: "custom-marker",
-    html: `<div class="custom-marker" ></div>`,
-    iconAnchor: [20, 20],
-  });
-  const marker = L.marker([30.391799720263787, -9.478511961375869], {
-    icon: customIcon,
-  }).addTo(map);
-  const popupContent = '<div class="custom-popup">Lion Park</div>';
-
-  marker.bindPopup(popupContent);
-</script>
