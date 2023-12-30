@@ -32,9 +32,8 @@ import Loader from "./Loader.astro";
               <div class="person__qt">
                 <button type="button" class="cta person__minest">-</button>
                 <input
-                  class="person-input"
+                  class="person-input input"
                   type="number"
-                  name=""
                   id="adult-input"
                   value="1"
                 />
@@ -49,7 +48,7 @@ import Loader from "./Loader.astro";
               <div class="person__qt">
                 <button type="button" class="cta person__minest">-</button>
                 <input
-                  class="person-input"
+                  class="person-input input"
                   type="number"
                   name=""
                   id="kid-input"
@@ -66,7 +65,7 @@ import Loader from "./Loader.astro";
               <div class="person__qt">
                 <button type="button" class="cta person__minest">-</button>
                 <input
-                  class="person-input"
+                  class="person-input input"
                   type="number"
                   name=""
                   id="kid-input"
@@ -85,15 +84,17 @@ import Loader from "./Loader.astro";
             </div>
             <input
               type="email"
-              class="ticket__email"
-              placeholder="Email@example.com"
+              class="ticket__email input"
+              placeholder="email@example.com"
               required
             />
           </div>
           <div class="ticket__bottom">
             <div class="ticket__total">
               <h4 class="ticket__total--text heading-third">
-                Total: <span class="ticket__total--price">35</span> MAD
+                Total:<span class="ticket__total--right">
+                  <span class="ticket__total--price">35</span> MAD</span
+                >
               </h4>
             </div>
             <button class="cta to-payment"

@@ -1,12 +1,14 @@
 ---
 import MainLayout from "../Layouts/MainLayout.astro";
 import FAQ from "../components/FAQ.astro";
-import Photos from "../components/Photos.astro";
+import Photos from "../components/Photos.jsx";
+import WeeklyWinner from "../components/WeeklyWinner.astro";
 ---
 
 <MainLayout
   title="Gallery"
   description="View stunning photos and videos of majestic lions, cute cubs, and other incredible wildlife at our lion park in Agadir, Morocco. A closer look at our pride.">
-  <Photos />
+  <Photos client:load />
+  <WeeklyWinner />
   <FAQ />
 </MainLayout>

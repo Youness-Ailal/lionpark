@@ -17,10 +17,16 @@
     overflow: hidden;
     position: relative;
     border: 1px solid var(--normal-green);
+    cursor: pointer;
+
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      transition: 0.2s;
+      &:hover {
+        scale: 1.02;
+      }
     }
     &:nth-child(1) {
       grid-column: 1/5;
@@ -63,6 +69,10 @@
     &:nth-child(6) {
       grid-column: span 2;
       position: relative;
+      transition: 0.2s;
+      &:hover img {
+        scale: 1.02;
+      }
       @media (max-width: 500px) {
         grid-column: 3/5;
         grid-row: 6/7;

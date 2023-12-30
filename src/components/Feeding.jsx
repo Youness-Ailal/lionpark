@@ -1,10 +1,8 @@
 import { useState } from "react";
 import "../styles/Feeding.scss";
 import ring from "../../public/icons/bell-ring.svg";
-const IMAGE_BASE_URL =
-  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_450/lionpark-swipers";
-const IMAGE_BASE_URL_LOW =
-  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_20/lionpark-swipers";
+const IMAGE_BASE_URL_MOBILE =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_250/lionpark-swipers";
 
 const feedingToday = [
   {
@@ -120,6 +118,8 @@ export default function Feeding() {
                 src={ring.src}
                 alt="bell ring"
                 className="icon feeding__icon"
+                heigh="28"
+                width="28"
               />
             </a>
           </div>
@@ -127,7 +127,7 @@ export default function Feeding() {
             {dayFeeding.map((item, index) => (
               <div key={index} className="feeding__card">
                 <img
-                  src={`${IMAGE_BASE_URL}/swiper_${item.index + 1}.jpg`}
+                  src={`${IMAGE_BASE_URL_MOBILE}/swiper_${item.index + 1}.jpg`}
                   alt={item.name}
                 />
                 <p className="feeding__time">{item.time}</p>

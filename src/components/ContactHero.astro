@@ -10,10 +10,17 @@ import Icon from "astro-icon";
       <div class="contact__left">
         <form class="contact__form">
           <div class="contact__form--field">
-            <input type="text" required id="contact_name" placeholder="Name" />
+            <input
+              class="input"
+              type="text"
+              required
+              id="contact_name"
+              placeholder="Name"
+            />
           </div>
           <div class="contact__form--field">
             <input
+              class="input"
               type="email"
               required
               id="contact_email"
@@ -21,7 +28,8 @@ import Icon from "astro-icon";
             />
           </div>
           <div class="contact__form--field">
-            <textarea id="contact__message" placeholder="Message"></textarea>
+            <textarea class="area" id="contact__message" placeholder="Message"
+            ></textarea>
           </div>
           <button class="cta"
             >Send<Icon

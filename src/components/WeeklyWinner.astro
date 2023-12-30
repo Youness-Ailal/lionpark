@@ -1,0 +1,77 @@
+---
+import Icon from "astro-icon";
+const BASE_GALLERY_URL =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_500/lionpark-gallery";
+const BASE_GALLERY_LOW =
+  "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_50/lionpark-gallery";
+---
+
+<div class="week">
+  <div class="week__content">
+    <div class="week__left">
+      <h2 class="heading-second week__title">Photo of the Week</h2>
+      <h3 class="heading-third week__title2">by Sarah</h3>
+      <p class="paragraph week__text">
+        The winner will receive a 50% discount on the next visit to the park!*
+      </p>
+      <button class="cta week__button">Send Your Photo</button>
+    </div>
+    <div class="week__right">
+      <!-- <div class="lazy-loader">
+        <div class="lazy-spinner"></div>
+      </div> -->
+      <img
+        class="lazy"
+        data-src={`${BASE_GALLERY_URL}/gallery_7.jpg`}
+        src={`${BASE_GALLERY_LOW}/gallery_7.jpg`}
+        data-alt="photo of the week"
+      />
+    </div>
+  </div>
+  <div class="week__submit">
+    <h2 class="heading-second">Submit Your Photo</h2>
+    <form action="" class="week__form">
+      <div class="week__form--top">
+        <input
+          type="text"
+          name="name"
+          id="week__name"
+          placeholder="Name"
+          required
+        />
+        <input
+          required
+          type="email"
+          name=""
+          id="week__email"
+          placeholder="Email Address"
+        />
+      </div>
+      <div class="week__form--mid">
+        <label for="week__file" class="week__form--label"
+          ><Icon class="icon week__form--label-icon" name="ep:upload-filled" />
+          <p class="week__file--text">Click or Drag an image</p></label
+        >
+        <input type="file" name="" id="week__file" required accept="image/*" />
+      </div>
+      <div class="week__form--bottom">
+        <button type="button" class="cta week__form--bottom-back"
+          >Go Back</button
+        >
+        <button class="cta" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="week__done hidden-week">
+    <Icon class="icon week__done--icon" name="ion:cloud-done-outline" />
+    <h2 class="heading-second">We Received Your Image!</h2>
+    <h3 class="heading-third">We'll let you know if you win by email</h3>
+    <button class="cta message-back">Go back</button>
+  </div>
+</div>
+<p class="paragraph week__desc">
+  *The winner is chosen weekly by the contest organizers. 50% discount can be
+  used for 2 tickets within 2 months from the date of receipt. You will receive
+  a notification about the winnings to the email indicated in your profile.
+</p>
+<script src="../script/gallery.js"></script>

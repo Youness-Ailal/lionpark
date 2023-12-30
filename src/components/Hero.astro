@@ -14,7 +14,7 @@ import lion9 from "/images/lion9.jpg?url";
 import lion10 from "/images/lion10.jpg?url";
 
 import lowimage from "/images/lowqt.svg?url";
-import HeroSwiper from "./homepage/HeroSwiper.astro";
+import HeroSwiper from "./homepage/HeroSwiper.jsx";
 ---
 
 <section class="hero">
@@ -36,6 +36,6 @@ import HeroSwiper from "./homepage/HeroSwiper.astro";
       <h1 class="hero__title heading">LION PARK AGADIR</h1>
       <a href="/Tickets" class="hero__button big-button">book<br />Tickets</a>
     </div>
-    <HeroSwiper />
+    <HeroSwiper client:load />
   </div>
 </section>

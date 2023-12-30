@@ -48,23 +48,23 @@
       @media (max-width: 400px) {
         grid-template-columns: 1fr;
       }
-      input {
-        color: var(--dark-green);
-        font-weight: 500;
-        padding: 2rem;
-        font-size: 1.8rem;
-        border-radius: 1rem;
-        border: 1px solid var(--dark-green);
-        outline: 1px solid transparent;
-        outline-offset: 1rem;
-        transition: 0.3s, border 0.2s;
-        &:focus {
-          border: 1px solid transparent;
+      // input {
+      //   color: var(--dark-green);
+      //   font-weight: 500;
+      //   padding: 2rem;
+      //   font-size: 1.8rem;
+      //   border-radius: 1rem;
+      //   border: 1px solid var(--dark-green);
+      //   outline: 1px solid transparent;
+      //   outline-offset: 1rem;
+      //   transition: 0.3s, border 0.2s;
+      //   &:focus {
+      //     border: 1px solid transparent;
 
-          outline: 1px solid var(--normal-green);
-          outline-offset: 0;
-        }
-      }
+      //     outline: 1px solid var(--normal-green);
+      //     outline-offset: 0;
+      //   }
+      // }
 
       button {
         height: 100%;

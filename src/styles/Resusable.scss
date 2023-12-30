@@ -126,9 +126,9 @@ input {
 .cta {
   align-self: start;
   background-color: var(--normal-green);
-  padding: 1rem 5rem;
+  padding: 1.4rem 5rem;
   border-radius: 1rem;
-  color: #fff;
+  color: var(--bg-color);
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
@@ -168,6 +168,10 @@ input {
 
   &:hover {
     background-color: var(--orange-hover);
+  }
+  @media (max-width: 1400px) {
+    height: 24rem;
+    font-size: 2.2rem;
   }
 }
 .hidden {
@@ -217,4 +221,35 @@ input {
     bottom: -10%;
     background-color: var(--normal-green);
   }
+}
+
+.input,
+.area {
+  width: 100%;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  font-size: 2rem;
+  border: 1px solid var(--grey);
+  background-color: var(--super-light-green-2);
+  outline: 2px solid transparent;
+  outline-offset: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  font-family: inherit;
+  transition: all 0.3s, border 0.15s;
+  font-weight: 500;
+  &::placeholder {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  &:focus {
+    border-color: transparent;
+    outline-offset: 0;
+    outline-color: var(--normal-green-hover);
+    // background-color: var(--super-light-green);
+  }
+}
+.area {
+  resize: none;
+  min-height: 25rem;
 }
