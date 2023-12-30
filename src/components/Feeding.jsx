@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/Feeding.scss";
-import { PiBellSimpleRinging } from "react-icons/pi";
-
+import ring from "../../public/icons/bell-ring.svg";
 const IMAGE_BASE_URL =
   "https://res.cloudinary.com/ddi3hd3cx/image/upload/w_450/lionpark-swipers";
 const IMAGE_BASE_URL_LOW =
@@ -117,7 +116,11 @@ export default function Feeding() {
             </button>
             <a href="#sub" className="feeding__sub">
               Subscribe
-              <PiBellSimpleRinging className="icon feeding__icon" />
+              <img
+                src={ring.src}
+                alt="bell ring"
+                className="icon feeding__icon"
+              />
             </a>
           </div>
           <div className="feeding__right--bottom">
